@@ -1,11 +1,11 @@
 const newsArticles = [
   {
-    title: "Council amendment reflects NSTA transport advocacy",
-    type: "Featured release",
-    date: "26 May 2026",
-    summary: "North Sydney Council's submission to the Northern Beaches Network Review was amended following a NSTA submission and mention.",
-    link: "https://youtu.be/ot0NXhIqcc4?si=pekQeDovpEaAKamC",
-    featured: true
+  title: "North Sydney Transport Association submission referenced during council debate",
+  type: "News",
+  date: "25 May 2026",
+  summary: "Councillors referenced an NSTA submission during debate on North Sydney Council's Northern Beaches Network Review response, with related amendments subsequently accepted.",
+  link: "articles/nsta-mentioned-in-council.html",
+  featured: true
   },
   {
     title: "NSTA News & Website Initiated",
@@ -17,7 +17,7 @@ const newsArticles = [
   {
   title: "Crows Nest, Burlington Street should become Crows Nest Village Interchange",
   type: "Proposal",
-  date: "April 2026",
+  date: "4 April 2026",
   summary: "NSTA argues that renaming the Burlington Street bus stops would improve wayfinding, distinguish the interchange from the metro station, and better reflect Crows Nest’s village identity.",
   link: "articles/crows-nest-village-interchange.html"
   },
