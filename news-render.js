@@ -10,7 +10,7 @@ if (featuredArticle) {
     <h2>${featuredArticle.title}</h2>
     <p>${featuredArticle.summary}</p>
     <p class="meta">${featuredArticle.type} • ${featuredArticle.date}</p>
-    <a href="${featuredArticle.link}">Read full release →</a>
+    <a href="${featuredArticle.link}">See full release →</a>
   `;
 }
 
@@ -23,7 +23,7 @@ regularArticles.forEach(article => {
       <p class="tag">${article.type}</p>
       <h2>${article.title}</h2>
       <p>${article.summary}</p>
-      <a href="${article.link}">Read more →</a>
+      <a href="${article.link}">See more →</a>
     </div>
     <span>${article.date}</span>
   `;
