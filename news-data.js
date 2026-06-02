@@ -16,7 +16,7 @@ const newsArticles = [
   },
   {
     title: "Crows Nest, Burlington Street Renaming",
-    type: "Submission",
+    type: "Announcement",
     date: "8 April 2026",
     summary: "A submission to Transport for NSW campaigning for the renaming of Crows Nest, Burlington St to Crows Nest Village.",
     link: "https://northsyd.github.io/Association/news/crowsnest.html"
