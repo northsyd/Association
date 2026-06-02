@@ -76,3 +76,119 @@
     max-width: 450px;
     cursor: zoom-in;
 }
+/* Animations */
+
+body {
+  animation: fadeIn 0.45s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.page-hero h1,
+.article-hero h1,
+.hero h1 {
+  animation: slideUp 0.7s ease;
+}
+
+.page-hero .lede,
+.article-hero .lede,
+.hero .lede {
+  animation: slideUp 0.9s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav a {
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.25s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.news-item,
+.featured-news,
+.card,
+.team-card,
+.contact-card,
+.article-sidebar,
+.feature-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.news-item:hover,
+.featured-news:hover,
+.card:hover,
+.team-card:hover,
+.contact-card:hover,
+.article-sidebar:hover,
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .28);
+}
+
+.button {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.article-body figure {
+  overflow: hidden;
+}
+
+.article-body figure img {
+  transition: transform .4s ease;
+}
+
+.article-body figure:hover img {
+  transform: scale(1.03);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
