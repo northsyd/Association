@@ -8,25 +8,11 @@ const newsArticles = [
     featured: true
   },
   {
-    title: "Yass Junction and Canberra Stations set to recieve accessibility infrastructure",
-    type: "Transport for NSW Media Release",
-    date: "4 March 2026",
-    summary: "Accessibility upgrades are being reviewed by community members before being applied to Yass Junction and Canberra Stations, marking better regional prioritisation.",
-    link: "https://www.transport.nsw.gov.au/news-and-events/media-releases/safer-more-accessible-transport-on-track-for-canberra-and-yass"
-  },
-  {
-    title: "24-Hour Transport makes a return",
-    type: "Transport for NSW Media Release",
-    date: "28 February 2026",
-    summary: "Sydney's 2026 Gay and Lesbian Mardi Gras has initiated 24-hour rail and metro service operations for the event.",
-    link: "https://www.transport.nsw.gov.au/news-and-events/media-releases/mardi-gras-gets-all-night-public-transport"
-  },
-  {
-    title: "Opening timeline announced for Coffs Harbour Bypass",
-    type: "Transport for NSW Media Release",
-    date: "17 February 2026",
-    summary: "Transport for NSW announces a 10-month wait until opening.",
-    link: "https://www.transport.nsw.gov.au/news-and-events/media-releases/signs-of-progress-on-coffs-harbours-new-bypass-t-minus-10-months"
+    title: "NSTA News & Website Initiated",
+    type: "Announcement",
+    date: "1 June 2026",
+    summary: "A new open-source website hosted on GitHub, and a news publication page for the Association, have been established.",
+    link: "https://nsta.github.io/Association/"
   },
   {
     title: "NSTA launches new Discord server",
