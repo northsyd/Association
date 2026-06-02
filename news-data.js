@@ -15,6 +15,13 @@ const newsArticles = [
     link: "https://northsyd.github.io/Association/"
   },
   {
+    title: "Crows Nest, Burlington Street Renaming",
+    type: "Submission",
+    date: "8 April 2026",
+    summary: "A submission to Transport for NSW campaigning for the renaming of Crows Nest, Burlington St to Crows Nest Village.",
+    link: "https://northsyd.github.io/Association/news/crowsnest.html"
+  },
+  {
     title: "NSTA launches new Discord server",
     type: "Announcement",
     date: "13 February 2026",
