@@ -12,7 +12,7 @@ const newsArticles = [
     type: "Announcement",
     date: "1 June 2026",
     summary: "A new open-source website hosted on GitHub, and a news publication page for the Association, have been established.",
-    link: "https://nsta.github.io/Association/"
+    link: "https://northsyd.github.io/Association/"
   },
   {
     title: "NSTA launches new Discord server",
