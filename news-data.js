@@ -8,6 +8,13 @@ const newsArticles = [
     featured: true
   },
   {
+    title: "Yass Junction and Canberra Stations set to recieve accessibility infrastructure",
+    type: "Transport for NSW Media Release",
+    date: "4 March 2026",
+    summary: "Accessibility upgrades are being reviewed by community members before being applied to Yass Junction and Canberra Stations, marking better regional prioritisation.",
+    link: "https://www.transport.nsw.gov.au/news-and-events/media-releases/safer-more-accessible-transport-on-track-for-canberra-and-yass"
+  },
+  {
     title: "24-Hour Transport makes a return",
     type: "Transport for NSW Media Release",
     date: "28 February 2026",
