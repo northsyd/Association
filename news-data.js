@@ -26,6 +26,6 @@ const newsArticles = [
     type: "Announcement",
     date: "13 February 2026",
     summary: "The server will be the main hub of the Association.",
-    link: "#"
+    link: "https://discord.com/invite/57d9m44vmu"
   }
 ];
