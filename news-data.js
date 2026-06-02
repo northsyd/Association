@@ -2,30 +2,30 @@ const newsArticles = [
   {
     title: "Council amendment reflects NSTA transport advocacy",
     type: "Featured release",
-    date: "May 2026",
-    summary: "NSTA welcomes council recognition of the need to future-proof key public transport corridors, including Military Road, for future mass transit options.",
-    link: "#",
+    date: "26 May 2026",
+    summary: "North Sydney Council's submission to the Northern Beaches Network Review was amended following a NSTA submission and mention.",
+    link: "https://youtu.be/ot0NXhIqcc4?si=pekQeDovpEaAKamC",
     featured: true
   },
   {
-    title: "Statement on Northern Beaches Network Review",
-    type: "Media release",
-    date: "May 2026",
-    summary: "NSTA calls for bus network reform to be matched with long-term mass transit corridor planning.",
-    link: "#"
+    title: "24-Hour Transport makes a return",
+    type: "Transport for NSW Media Release",
+    date: "28 February 2026",
+    summary: "Sydney's 2026 Gay and Lesbian Mardi Gras has initiated 24-hour rail and metro service operations for the event.",
+    link: "https://www.transport.nsw.gov.au/news-and-events/media-releases/mardi-gras-gets-all-night-public-transport"
   },
   {
-    title: "Leadership debate held at North Sydney",
-    type: "Event recap",
-    date: "May 2026",
-    summary: "Members discussed the future direction of NSTA and priorities for transport advocacy.",
-    link: "#"
+    title: "Opening timeline announced for Coffs Harbour Bypass",
+    type: "Transport for NSW Media Release",
+    date: "17 February 2026",
+    summary: "Transport for NSW announces a 10-month wait until opening.",
+    link: "https://www.transport.nsw.gov.au/news-and-events/media-releases/signs-of-progress-on-coffs-harbours-new-bypass-t-minus-10-months"
   },
   {
-    title: "NSTA launches new website",
+    title: "NSTA launches new Discord server",
     type: "Announcement",
-    date: "2026",
-    summary: "The website will host association information, news, contact details and future media releases.",
+    date: "13 February 2026",
+    summary: "The server will be the main hub of the Association.",
     link: "#"
   }
 ];
