@@ -22,6 +22,13 @@ const newsArticles = [
   link: "articles/regan-trackless-trams.html"
   },
   {
+  title: "Playing Jet Lag: The Game's Hide and Seek on the Sydney Rail Network",
+  type: "Feature",
+  date: "21 April 2026",
+  summary: "Three teams, three days, and one giant game of hide and seek across Sydney's trains, metro, ferries and buses.",
+  link: "articles/jet-lag-hide-and-seek.html"
+  },
+  {
   title: "Crows Nest, Burlington Street should become Crows Nest Village Interchange",
   type: "Proposal",
   date: "4 April 2026",
