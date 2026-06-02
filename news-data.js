@@ -8,11 +8,18 @@ const newsArticles = [
   featured: true
   },
   {
-    title: "NSTA News & Website Initiated",
-    type: "Announcement",
-    date: "1 June 2026",
-    summary: "A new open-source website hosted on GitHub, and a news publication page for the Association, have been established.",
-    link: "https://northsyd.github.io/Association/"
+  title: "NSTA News & Website Initiated",
+  type: "Announcement",
+  date: "1 June 2026",
+  summary: "A new open-source website hosted on GitHub, and a news publication page for the Association, have been established.",
+  link: "https://northsyd.github.io/Association/"
+  },
+  {
+  title: "Regan hopes for Beaches Link and trackless trams as Beaches' future transport developments",
+  type: "Interview",
+  date: "21 April 2026",
+  summary: "Following a meeting with Wakehurst MP Michael Regan, NSTA examines his views on Beaches Link, bus network reform and the possibility of trackless trams on the Northern Beaches.",
+  link: "articles/regan-trackless-trams.html"
   },
   {
   title: "Crows Nest, Burlington Street should become Crows Nest Village Interchange",
@@ -22,10 +29,10 @@ const newsArticles = [
   link: "articles/crows-nest-village-interchange.html"
   },
   {
-    title: "NSTA launches new Discord server",
-    type: "Announcement",
-    date: "13 February 2026",
-    summary: "The server will be the main hub of the Association.",
-    link: "https://discord.com/invite/57d9m44vmu"
+  title: "NSTA launches new Discord server",
+  type: "Announcement",
+  date: "13 February 2026",
+  summary: "The server will be the main hub of the Association.",
+  link: "https://discord.com/invite/57d9m44vmu"
   }
 ];
