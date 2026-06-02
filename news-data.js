@@ -8,6 +8,13 @@ const newsArticles = [
   featured: true
   },
   {
+  title: "Future-Proofed Light Rail Network Strategy submitted to Northern Beaches Transport Review",
+  type: "Report",
+  date: "May 2026",
+  summary: "A long-term light rail and corridor future-proofing strategy for Military Road, the Lower North Shore and the Northern Beaches.",
+  link: "articles/future-proofed-light-rail-network-strategy.html"
+  },
+  {
   title: "NSTA News & Website Initiated",
   type: "Announcement",
   date: "1 June 2026",
