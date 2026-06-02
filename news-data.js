@@ -8,11 +8,11 @@ const newsArticles = [
   featured: true
   },
   {
-  title: "Future-Proofed Light Rail Network Strategy submitted to Northern Beaches Transport Review",
-  type: "Report",
-  date: "May 2026",
-  summary: "A long-term light rail and corridor future-proofing strategy for Military Road, the Lower North Shore and the Northern Beaches.",
-  link: "articles/future-proofed-light-rail-network-strategy.html"
+  title: "North West Sydney bus changes from 21 June 2026",
+  type: "Transport update",
+  date: "June 2026",
+  summary: "A summary of Region 4 and 7 bus changes, including new route 52, withdrawn routes, Metro feeder upgrades and North Shore timetable adjustments.",
+  link: "articles/north-west-sydney-bus-changes.html"
   },
   {
   title: "NSTA News & Website Initiated",
@@ -20,6 +20,13 @@ const newsArticles = [
   date: "1 June 2026",
   summary: "A new open-source website hosted on GitHub, and a news publication page for the Association, have been established.",
   link: "https://northsyd.github.io/Association/"
+  },
+  {
+  title: "Future-Proofed Light Rail Network Strategy submitted to Northern Beaches Transport Review",
+  type: "Report",
+  date: "May 2026",
+  summary: "A long-term light rail and corridor future-proofing strategy for Military Road, the Lower North Shore and the Northern Beaches.",
+  link: "articles/future-proofed-light-rail-network-strategy.html"
   },
   {
   title: "Regan hopes for Beaches Link and trackless trams as Beaches' future transport developments",
