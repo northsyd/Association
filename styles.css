@@ -243,3 +243,62 @@ body {
     color: var(--gold);
     text-shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.candidate-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+.candidate-table th,
+.candidate-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.candidate-table th {
+  color: var(--gold);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.stance {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+.stance.support {
+  background: #1f8f5f;
+  color: white;
+}
+
+.stance.oppose {
+  background: #a33a3a;
+  color: white;
+}
+
+.stance.unsure {
+  background: #a8842c;
+  color: white;
+}
+
+.stance.no-response {
+  background: #4b5563;
+  color: white;
+}
+
+.small-text {
+  color: var(--muted);
+  font-size: .85rem;
+}
