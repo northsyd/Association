@@ -21,3 +21,23 @@ const revealObserver = new IntersectionObserver(entries => {
 revealElements.forEach(element => {
   revealObserver.observe(element);
 });
+const hoverTarget = document.querySelector(".hover-target");
+const hoverImage = document.getElementById("hover-image");
+
+hoverTarget.addEventListener("mouseenter", () => {
+  const imgSrc = hoverTarget.getAttribute("data-image");
+  hoverImage.innerHTML = `<img src="${imgSrc}">`;
+  hoverImage.style.opacity = 1;
+});
+
+hoverTarget.addEventListener("mousemove", (e) => {
+  hoverImage.style.left = e.pageX + 20 + "px";
+  hoverImage.style.top = e.pageY + 20 + "px";
+});
+
+hoverTarget.addEventListener("mouseleave", () => {
+  hoverImage.style.opacity = 0;
+  setTimeout(() => {
+    hoverImage.innerHTML = "";
+  }, 250);
+});
