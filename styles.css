@@ -302,3 +302,25 @@ body {
   color: var(--muted);
   font-size: .85rem;
 }
+.hover-target {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+/* The floating image container */
+#hover-image {
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 9999;
+}
+
+#hover-image img {
+  width: 220px;
+  border: 1px solid #ccc;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  border-radius: 6px;
+}
