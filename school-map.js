@@ -1,7 +1,7 @@
 const sydneyMap = L.map("sydney-map", {
   zoomControl: true,
   scrollWheelZoom: false
-}).setView([-33.86, 151.16], 10);
+}).setView([-33.86, 151.15], 10);
 
 const perthMap = L.map("perth-map", {
   zoomControl: false,
@@ -34,61 +34,61 @@ const goldIcon = L.divIcon({
 const sydneySchools = [
   {
     name: "North Sydney Boys High School",
-    coords: [-33.8206, 151.2046],
-    info: "Represented school. Founding school connection."
+    coords: [-33.82433, 151.20450],
+    info: "Founding school connection."
   },
   {
     name: "North Sydney Girls High School",
-    coords: [-33.8310, 151.2077],
-    info: "Represented school."
+    coords: [-33.82225, 151.20065],
+    info: "Represented within NSTA."
   },
   {
     name: "Sydney Girls High School",
-    coords: [-33.8952, 151.2237],
-    info: "Represented school."
+    coords: [-33.89285, 151.22305],
+    info: "Represented within NSTA."
   },
   {
     name: "Sydney Technical High School",
-    coords: [-33.9721, 151.1219],
-    info: "Represented school."
+    coords: [-33.96470, 151.11890],
+    info: "Represented within NSTA."
   },
   {
     name: "Epping Boys High School",
-    coords: [-33.7728, 151.0765],
-    info: "Represented school."
+    coords: [-33.75820, 151.08410],
+    info: "Represented within NSTA."
   },
   {
     name: "Homebush Boys High School",
-    coords: [-33.8684, 151.0879],
-    info: "Represented school."
+    coords: [-33.86710, 151.08620],
+    info: "Represented within NSTA."
   },
   {
     name: "James Ruse Agricultural High School",
-    coords: [-33.7793, 151.0411],
-    info: "Represented school."
+    coords: [-33.77860, 151.04430],
+    info: "Represented within NSTA."
   },
   {
     name: "Marcellin College Randwick",
-    coords: [-33.9142, 151.2414],
-    info: "Represented school."
+    coords: [-33.91400, 151.24200],
+    info: "Represented within NSTA."
   },
   {
     name: "Ryde Secondary College",
-    coords: [-33.8105, 151.1069],
-    info: "Represented school."
+    coords: [-33.81120, 151.11160],
+    info: "Represented within NSTA."
   },
   {
     name: "Mater Maria Catholic College",
-    coords: [-33.6816, 151.3039],
-    info: "Represented school."
+    coords: [-33.68430, 151.30410],
+    info: "Represented within NSTA."
   }
 ];
 
 const perthSchools = [
   {
     name: "Perth Modern School",
-    coords: [-31.9481, 115.8232],
-    info: "Represented school in Western Australia."
+    coords: [-31.94650, 115.83920],
+    info: "Represented within NSTA. Western Australia."
   }
 ];
 
@@ -113,5 +113,17 @@ function addSchoolMarker(map, school) {
   });
 }
 
-sydneySchools.forEach(school => addSchoolMarker(sydneyMap, school));
-perthSchools.forEach(school => addSchoolMarker(perthMap, school));
+const bounds = L.latLngBounds();
+
+sydneySchools.forEach(school => {
+  addSchoolMarker(sydneyMap, school);
+  bounds.extend(school.coords);
+});
+
+perthSchools.forEach(school => {
+  addSchoolMarker(perthMap, school);
+});
+
+sydneyMap.fitBounds(bounds, {
+  padding: [40, 40]
+});
