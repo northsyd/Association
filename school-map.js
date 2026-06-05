@@ -34,52 +34,52 @@ const goldIcon = L.divIcon({
 const sydneySchools = [
   {
     name: "North Sydney Boys High School",
-    coords: [-33.82433, 151.20450],
+    coords: [-33.829593384086664, 151.20772732653086],
     info: "Founding school connection."
   },
   {
     name: "North Sydney Girls High School",
-    coords: [-33.82225, 151.20065],
+    coords: [-33.83026989406617, 151.20329914259014],
     info: "Represented within NSTA."
   },
   {
     name: "Sydney Girls High School",
-    coords: [-33.89285, 151.22305],
+    coords: [-33.893699132210294, 151.2205958015759],
     info: "Represented within NSTA."
   },
   {
     name: "Sydney Technical High School",
-    coords: [-33.96470, 151.11890],
+    coords: [-33.96253203850645, 151.114550343767],
     info: "Represented within NSTA."
   },
   {
     name: "Epping Boys High School",
-    coords: [-33.75820, 151.08410],
+    coords: [-33.77015785892064, 151.09887606858683],
     info: "Represented within NSTA."
   },
   {
     name: "Homebush Boys High School",
-    coords: [-33.86710, 151.08620],
+    coords: [-33.866179369695004, 151.07722935059797],
     info: "Represented within NSTA."
   },
   {
     name: "James Ruse Agricultural High School",
-    coords: [-33.77860, 151.04430],
+    coords: [-33.781958447740145, 151.04216933741895],
     info: "Represented within NSTA."
   },
   {
     name: "Marcellin College Randwick",
-    coords: [-33.91400, 151.24200],
+    coords: [-33.91343013834256, 151.24112342559482],
     info: "Represented within NSTA."
   },
   {
     name: "Ryde Secondary College",
-    coords: [-33.81120, 151.11160],
+    coords: [-33.81354667882517, 151.11903875224294],
     info: "Represented within NSTA."
   },
   {
     name: "Mater Maria Catholic College",
-    coords: [-33.68430, 151.30410],
+    coords: [-33.683773372380095, 151.28449773966062],
     info: "Represented within NSTA."
   }
 ];
@@ -87,7 +87,7 @@ const sydneySchools = [
 const perthSchools = [
   {
     name: "Perth Modern School",
-    coords: [-31.94650, 115.83920],
+    coords: [-31.9450098753986, 115.83844634056906],
     info: "Represented within NSTA. Western Australia."
   }
 ];
