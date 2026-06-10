@@ -8,6 +8,13 @@ const newsArticles = [
   featured: true
   },
   {
+  title: "NSTA submits recommendations for the Bandon Road Corridor Upgrade",
+  type: "Submission",
+  date: "June 2026",
+  summary: "NSTA has lodged a submission supporting the Bandon Road Corridor Upgrade while calling for future rail duplication provisions and improved bus interchange at Vineyard Station.",
+  link: "articles/vineyard-station-bandon-road-submission.html"
+  }
+  {
   title: "North West Sydney bus changes from 21 June 2026",
   type: "Transport update",
   date: "June 2026",
