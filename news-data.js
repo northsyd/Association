@@ -1,10 +1,10 @@
 const newsArticles = [
   {
-  title: "North Sydney Transport Association submission referenced during council debate",
-  type: "News",
-  date: "25 May 2026",
-  summary: "Councillors referenced an NSTA submission during debate on North Sydney Council's Northern Beaches Network Review response, with related amendments subsequently accepted.",
-  link: "articles/nsta-mentioned-in-council.html",
+  title: "Out Without a Bang: The Missed Farewell for Sydney's K Sets",
+  type: "Commentary",
+  date: "15 June 2026",
+  summary: "NSTA reflects on the quiet retirement of Sydney's K Sets after more than forty years of service, following their final passenger run from Redfern to Leppington.",
+  link: "articles/k-set-retirement-out-without-a-bang.html",
   featured: true
   },
   {
@@ -27,6 +27,13 @@ const newsArticles = [
   date: "1 June 2026",
   summary: "A new open-source website hosted on GitHub, and a news publication page for the Association, have been established.",
   link: "https://northsyd.github.io/Association/"
+  },
+  {
+  title: "North Sydney Transport Association submission referenced during council debate",
+  type: "News",
+  date: "25 May 2026",
+  summary: "Councillors referenced an NSTA submission during debate on North Sydney Council's Northern Beaches Network Review response, with related amendments subsequently accepted.",
+  link: "articles/nsta-mentioned-in-council.html",
   },
   {
   title: "Future-Proofed Light Rail Network Strategy submitted to Northern Beaches Transport Review",
