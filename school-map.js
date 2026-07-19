@@ -1,7 +1,7 @@
 const sydneyMap = L.map("sydney-map", {
   zoomControl: true,
   scrollWheelZoom: false
-}).setView([-33.86, 151.15], 10);
+}).setView([-33.86, 151.15], 9);
 
 const perthMap = L.map("perth-map", {
   zoomControl: false,
@@ -83,11 +83,6 @@ const sydneySchools = [
     info: "Represented within NSTA."
   },
   {
-    name: "Hurlstone Agricultural High School",
-    coords: [-33.97006170029876, 150.89132099802706],
-    info: "Represented within NSTA."
-  },
-  {
     name: "Cecil Hills High School",
     coords: [-33.97006170029876, 150.89132099802706],
     info: "Represented within NSTA."
@@ -97,6 +92,11 @@ const sydneySchools = [
     coords: [-33.94795747386239, 150.85098353714002],
     info: "Represented within NSTA."
   },
+  {
+    name: "Hurlstone Agricultural High School",
+    coords: [-33.97006170029876, 150.89132099802706],
+    info: "Represented within NSTA."
+  }
 ];
 
 const perthSchools = [
