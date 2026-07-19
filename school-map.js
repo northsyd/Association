@@ -81,7 +81,22 @@ const sydneySchools = [
     name: "Mater Maria Catholic College",
     coords: [-33.683773372380095, 151.28449773966062],
     info: "Represented within NSTA."
-  }
+  },
+  {
+    name: "Hurlstone Agricultural High School",
+    coords: [-33.97006170029876, 150.89132099802706],
+    info: "Represented within NSTA."
+  },
+  {
+    name: "Cecil Hills High School",
+    coords: [-33.97006170029876, 150.89132099802706],
+    info: "Represented within NSTA."
+  },
+  {
+    name: "William Carey Christian School",
+    coords: [-33.94795747386239, 150.85098353714002],
+    info: "Represented within NSTA."
+  },
 ];
 
 const perthSchools = [
