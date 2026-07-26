@@ -1,11 +1,18 @@
 const newsArticles = [
   {
+  title: "Runaway Train triggers safety concerns among Transport Advocates",
+  type: "Press Release",
+  date: "26 July 2026",
+  summary: "NSTA calls for Pacific National rail safety review following Hunter runaway train incident.",
+  link: "articles/runawaytrain.html",
+  featured: true
+  },
+  {
   title: "Out Without a Bang: The Missed Farewell for Sydney's K Sets",
   type: "Commentary",
   date: "15 June 2026",
   summary: "NSTA reflects on the quiet retirement of Sydney's K Sets after more than forty years of service, following their final passenger run from Redfern to Leppington.",
-  link: "articles/k-set-retirement-out-without-a-bang.html",
-  featured: true
+  link: "articles/k-set-retirement-out-without-a-bang.html"
   },
   {
   title: "NSTA submits recommendations for the Bandon Road Corridor Upgrade",
