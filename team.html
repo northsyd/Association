@@ -1,130 +1,662 @@
 <!doctype html>
 <html lang="en-AU">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <title>Who We Are | North Sydney Transport Association</title>
-  <meta name="description" content="North Sydney Transport Association — student-led transport advocacy for a better connected North Sydney.">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <meta
+    name="description"
+    content="Meet the people behind the North Sydney Transport Association and discover the schools and communities represented across NSTA."
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
+
 <body>
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
   <header class="site-header">
-    <a class="brand" href="index.html"><span class="brand-mark">NSTA</span><span class="brand-text">North Sydney<br>Transport Association</span></a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">Menu</button>
+
+    <a class="brand" href="index.html">
+      <span class="brand-mark">NSTA</span>
+
+      <span class="brand-text">
+        North Sydney<br>
+        Transport Association
+      </span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      Menu
+    </button>
+
     <nav class="nav" data-nav>
-        <a class="" href="index.html">Introduction & About</a>
-        <a class="active" href="team.html">Who We Are</a>
-        <a class="" href="news.html">News & Media</a>
-        <a class="" href="contact.html">Discord & Contact</a>
+
+      <a href="index.html">
+        Introduction &amp; About
+      </a>
+
+      <a class="active" href="team.html">
+        Who We Are
+      </a>
+
+      <a href="news.html">
+        News &amp; Media
+      </a>
+
+      <a href="contact.html">
+        Discord &amp; Contact
+      </a>
+
     </nav>
+
   </header>
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
   <main>
 
-    <section class="page-hero"><p class="eyebrow">Who we are</p><h1>Meet the 2026 executive team.</h1></section>
-<section class="section">
-  <div class="team-grid">
-    <article class="team-card">
-      <div class="avatar">P</div>
-      <p class="tag">President</p>
-      <h2>Lachlan Steenson</h2>
-      <p>Leads the association, coordinates advocacy priorities and represents NSTA in public-facing work.</p>
-      <p>Email: president@northsydneytransport.org</p>
-    </article>
 
-    <article class="team-card">
-      <div class="avatar">VP</div>
-      <p class="tag">Vice President</p>
-      <h2>Charlie Green</h2>
-      <p>Supports the president, helps manage events and contributes to project development.</p>
-      <p>Email: vicepresident@northsydneytransport.org</p>
-    </article>
+    <!-- ===================================================
+         HERO
+         =================================================== -->
 
-    <article class="team-card">
-      <div class="avatar">S</div>
-      <p class="tag">Secretary</p>
-      <h2>Marcus Ng</h2>
-      <p>Manages records, meeting notes, internal communication and association documents.</p>
-      <p>Email: secretary@northsydneytransport.org</p>
-    </article>
+    <section class="page-hero">
 
-    <article class="team-card">
-      <div class="avatar">T</div>
-      <p class="tag">Treasurer</p>
-      <h2>Aden Lam</h2>
-      <p>Handles association finances and supports responsible financial management.</p>
-      <p>Email: treasurer@northsydneytransport.org</p>
-    </article>
+      <p class="eyebrow">
+        Who we are / 2026
+      </p>
 
-    <article class="team-card">
-      <div class="avatar">EO</div>
-      <p class="tag">Events Officer</p>
-      <h2>Yiping Pan</h2>
-      <p>Coordinates NSTA events, activities and member engagement opportunities.</p>
-      <p>Email: events@northsydneytransport.org</p>
-    </article>
+      <h1>
+        The people<br>
+        moving NSTA forward.
+      </h1>
 
-    <article class="team-card">
-      <div class="avatar">MC</div>
-      <p class="tag">Marketing & Communications Officer</p>
-      <h2>Sylvia Duong</h2>
-      <p>Manages public communications, social media presence and promotional activities.</p>
-      <p>Email: sylvia@northsydneytransport.org</p>
-    </article>
+      <p class="lede">
+        Meet the young people behind our advocacy, projects,
+        events and campaigns.
+      </p>
 
-    <article class="team-card">
-      <div class="avatar">TC</div>
-      <p class="tag">Transit Club Liaison</p>
-      <h2>Roy Zhang</h2>
-      <p>Coordinates relations with youth transport groups and the North Sydney Boys High School Transit Club.</p>
-      <p>Email: liaison@northsydneytransport.org</p>
-    </article>
+    </section>
 
-    <article class="team-card">
-      <div class="avatar">A</div>
-      <p class="tag">Archivist</p>
-      <h2>Ian</h2>
-      <p>Organises and maintains NSTA’s collection of transport memorabilia, archives and historical resources.</p>
-      <p>Email: archivist@northsydneytransport.org</p>
-    </article>
-  </div>
-</section>
+
+    <!-- ===================================================
+         EXECUTIVE INTRO
+         =================================================== -->
+
     <section class="section">
-  <div class="section-heading">
-    <p class="eyebrow">Representation</p>
-    <h2>Schools represented across NSTA</h2>
-  </div>
 
-  <p class="lede">
-    NSTA includes members and delegates from 14 schools across New South Wales and Western Australia, with additional representation from Queensland.
-  </p>
+      <div class="section-heading">
 
-  <div class="map-container">
-    <div id="sydney-map"></div>
+        <div>
+          <p class="eyebrow">
+            Executive team
+          </p>
 
-    <div class="perth-inset">
-      <div class="inset-label">Perth inset</div>
-      <div id="perth-map"></div>
-    </div>
-  </div>
+          <h2>
+            2026 leadership.
+          </h2>
+        </div>
 
-  <p class="map-note">
-    Queensland is represented within NSTA through an interstate delegate.
-  </p>
-</section>
-    <section class="section callout"><p class="eyebrow">Join the team</p><h2>Interested in helping out around the NSTA?</h2><p>We are always looking for people who can write, research, design, organise events or just bring good ideas.</p><a class="button" href="contact.html">Get in contact</a></section>
+      </div>
+
+      <div class="feature-card team-intro">
+
+        <div class="team-intro-label">
+          NSTA / EXECUTIVE
+        </div>
+
+        <p>
+          The NSTA executive coordinates the association's
+          advocacy priorities, projects, communications,
+          events and administration.
+        </p>
+
+        <p>
+          Our team brings together different interests,
+          skills and perspectives — with a shared goal of
+          making transport better for the communities we
+          live in.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         EXECUTIVE CARDS
+         =================================================== -->
+
+    <section class="section team-section">
+
+      <div class="team-grid">
+
+
+        <!-- PRESIDENT -->
+
+        <article class="team-card team-card-primary">
+
+          <div class="avatar">
+            P
+          </div>
+
+          <p class="tag">
+            President
+          </p>
+
+          <h2>
+            Lachlan Steenson
+          </h2>
+
+          <p>
+            Leads the association, coordinates advocacy
+            priorities and represents NSTA in public-facing
+            work.
+          </p>
+
+          <a
+            class="team-email"
+            href="mailto:president@northsydneytransport.org"
+          >
+            president@northsydneytransport.org
+          </a>
+
+        </article>
+
+
+        <!-- VICE PRESIDENT -->
+
+        <article class="team-card">
+
+          <div class="avatar">
+            VP
+          </div>
+
+          <p class="tag">
+            Vice President
+          </p>
+
+          <h2>
+            Charlie Green
+          </h2>
+
+          <p>
+            Supports the president, helps manage events and
+            contributes to project development.
+          </p>
+
+          <a
+            class="team-email"
+            href="mailto:vicepresident@northsydneytransport.org"
+          >
+            vicepresident@northsydneytransport.org
+          </a>
+
+        </article>
+
+
+        <!-- SECRETARY -->
+
+        <article class="team-card">
+
+          <div class="avatar">
+            S
+          </div>
+
+          <p class="tag">
+            Secretary
+          </p>
+
+          <h2>
+            Marcus Ng
+          </h2>
+
+          <p>
+            Manages records, meeting notes, internal
+            communication and association documents.
+          </p>
+
+          <a
+            class="team-email"
+            href="mailto:secretary@northsydneytransport.org"
+          >
+            secretary@northsydneytransport.org
+          </a>
+
+        </article>
+
+
+        <!-- TREASURER -->
+
+        <article class="team-card">
+
+          <div class="avatar">
+            T
+          </div>
+
+          <p class="tag">
+            Treasurer
+          </p>
+
+          <h2>
+            Aden Lam
+          </h2>
+
+          <p>
+            Handles association finances and supports
+            responsible financial management.
+          </p>
+
+          <a
+            class="team-email"
+            href="mailto:treasurer@northsydneytransport.org"
+          >
+            treasurer@northsydneytransport.org
+          </a>
+
+        </article>
+
+
+        <!-- EVENTS -->
+
+        <article class="team-card">
+
+          <div class="avatar">
+            EO
+          </div>
+
+          <p class="tag">
+            Events Officer
+          </p>
+
+          <h2>
+            Yiping Pan
+          </h2>
+
+          <p>
+            Coordinates NSTA events, activities and member
+            engagement opportunities.
+          </p>
+
+          <a
+            class="team-email"
+            href="mailto:events@northsydneytransport.org"
+          >
+            events@northsydneytransport.org
+          </a>
+
+        </article>
+
+
+        <!-- MARKETING -->
+
+        <article class="team-card">
+
+          <div class="avatar">
+            MC
+          </div>
+
+          <p class="tag">
+            Marketing &amp; Communications Officer
+          </p>
+
+          <h2>
+            Sylvia Duong
+          </h2>
+
+          <p>
+            Manages public communications, social media
+            presence and promotional activities.
+          </p>
+
+          <a
+            class="team-email"
+            href="mailto:sylvia@northsydneytransport.org"
+          >
+            sylvia@northsydneytransport.org
+          </a>
+
+        </article>
+
+
+        <!-- TRANSIT CLUB LIAISON -->
+
+        <article class="team-card">
+
+          <div class="avatar">
+            TC
+          </div>
+
+          <p class="tag">
+            Transit Club Liaison
+          </p>
+
+          <h2>
+            Roy Zhang
+          </h2>
+
+          <p>
+            Coordinates relations with youth transport groups
+            and the North Sydney Boys High School Transit Club.
+          </p>
+
+          <a
+            class="team-email"
+            href="mailto:liaison@northsydneytransport.org"
+          >
+            liaison@northsydneytransport.org
+          </a>
+
+        </article>
+
+
+        <!-- ARCHIVIST -->
+
+        <article class="team-card">
+
+          <div class="avatar">
+            A
+          </div>
+
+          <p class="tag">
+            Archivist
+          </p>
+
+          <h2>
+            Ian
+          </h2>
+
+          <p>
+            Organises and maintains NSTA's collection of
+            transport memorabilia, archives and historical
+            resources.
+          </p>
+
+          <a
+            class="team-email"
+            href="mailto:archivist@northsydneytransport.org"
+          >
+            archivist@northsydneytransport.org
+          </a>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         REPRESENTATION
+         =================================================== -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            Representation
+          </p>
+
+          <h2>
+            A network beyond<br>
+            North Sydney.
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <p class="lede">
+
+        NSTA includes members and delegates from
+        14 schools across New South Wales and Western
+        Australia, with additional representation from
+        Queensland.
+
+      </p>
+
+
+      <div class="map-container">
+
+        <div id="sydney-map"></div>
+
+
+        <div class="perth-inset">
+
+          <div class="inset-label">
+            Perth inset
+          </div>
+
+          <div id="perth-map"></div>
+
+        </div>
+
+      </div>
+
+
+      <p class="map-note">
+
+        Queensland is represented within NSTA through an
+        interstate delegate.
+
+      </p>
+
+    </section>
+
+
+    <!-- ===================================================
+         JOIN
+         =================================================== -->
+
+    <section class="section">
+
+      <div class="callout">
+
+        <p class="eyebrow">
+          Join the team
+        </p>
+
+        <h2>
+          Have an idea?<br>
+          Bring it to NSTA.
+        </h2>
+
+        <p>
+          We're always looking for people who can research,
+          write, design, organise events, photograph,
+          communicate — or simply bring a good idea to
+          the table.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            class="button"
+            href="contact.html"
+          >
+            Get in contact
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="mailto:nsta@northsydneytransport.org"
+          >
+            Email NSTA
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
   </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
   <footer class="footer">
+
     <div class="footer-grid">
-      <div><a class="footer-brand" href="index.html">North Sydney Transport Association</a><p>Trailblazing youth transport advocacy for a better connected city.</p><p class="small">Independent advocacy group. Not affiliated with Transport for NSW, North Sydney Council, or any school unless clearly stated.</p></div>
-      <div><h3>Pages</h3><a href="index.html">Introduction & About</a><a href="team.html">Who We Are</a><a href="news.html">News & Media</a><a href="contact.html">Discord & Contact</a></div>
-      <div><h3>Contact</h3><a href="mailto:nsta@northsydneytransport@gmail.com">Email us</a><a href="https://www.instagram.com/northsydney_transport_org">Instagram</a><a href="https://discord.gg/wrxN6MrN6j">Discord</a></div>
-      <div><h3>Acknowledgement</h3><p>NSTA acknowledges the Cammeraygal people as the Traditional Custodians of the North Sydney area.</p></div>
+
+
+      <!-- BRAND -->
+
+      <div>
+
+        <a
+          class="footer-brand"
+          href="index.html"
+        >
+          North Sydney<br>
+          Transport Association
+        </a>
+
+        <p>
+          Trailblazing youth transport advocacy for a better
+          connected city.
+        </p>
+
+        <p class="small">
+          Independent advocacy group. Not affiliated with
+          Transport for NSW, North Sydney Council, or any
+          school unless clearly stated.
+        </p>
+
+      </div>
+
+
+      <!-- PAGES -->
+
+      <div>
+
+        <h3>
+          Pages
+        </h3>
+
+        <a href="index.html">
+          Introduction &amp; About
+        </a>
+
+        <a href="team.html">
+          Who We Are
+        </a>
+
+        <a href="news.html">
+          News &amp; Media
+        </a>
+
+        <a href="contact.html">
+          Discord &amp; Contact
+        </a>
+
+      </div>
+
+
+      <!-- CONTACT -->
+
+      <div>
+
+        <h3>
+          Contact
+        </h3>
+
+        <a href="mailto:nsta@northsydneytransport.org">
+          Email us
+        </a>
+
+        <a
+          href="https://www.instagram.com/northsydneytransport_org"
+          target="_blank"
+          rel="noopener"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="https://discord.gg/wrxN6MrN6j"
+          target="_blank"
+          rel="noopener"
+        >
+          Discord
+        </a>
+
+      </div>
+
+
+      <!-- ACKNOWLEDGEMENT -->
+
+      <div>
+
+        <h3>
+          Acknowledgement
+        </h3>
+
+        <p>
+          NSTA acknowledges the Cammeraygal people as the
+          Traditional Custodians of the North Sydney area.
+        </p>
+
+      </div>
+
+
     </div>
-    <div class="footer-bottom"><p>© <span id="year"></span> North Sydney Transport Association</p></div>
+
+
+    <div class="footer-bottom">
+
+      <p>
+        © <span id="year"></span>
+        North Sydney Transport Association
+      </p>
+
+      <p>
+        NSW's First Youth Transport Advocacy Group
+      </p>
+
+    </div>
+
   </footer>
+
+
+  <!-- =====================================================
+       SCRIPTS
+       ===================================================== -->
+
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
   <script src="school-map.js"></script>
+
   <script src="script.js"></script>
+
 </body>
+
 </html>
