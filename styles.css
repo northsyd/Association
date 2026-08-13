@@ -3,6 +3,11 @@
    North Sydney Transport Association
    ========================================================= */
 
+
+/* =========================================================
+   FONTS
+   ========================================================= */
+
 @font-face {
   font-family: "Retro Stereo Wide";
   src: url("assets/fonts/Retro Stereo Wide.ttf") format("truetype");
@@ -42,12 +47,18 @@
   --panel: #fffdf8;
 
   --max: 1180px;
-  --radius: 0;
 
   --font-display: "Retro Mono Wide", "Arial Black", sans-serif;
   --font-stereo: "Retro Stereo Wide", "Arial Black", sans-serif;
-  --font-body: Inter, ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --font-body:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
 
 
@@ -65,10 +76,13 @@ html {
 
 body {
   margin: 0;
+
   background: var(--paper);
   color: var(--ink);
+
   font-family: var(--font-body);
   line-height: 1.55;
+
   animation: fadeIn 0.45s ease;
 }
 
@@ -98,19 +112,23 @@ button {
 h1,
 h2,
 h3 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 0.98;
-  letter-spacing: -0.025em;
   margin: 0;
+
+  color: var(--ink);
+
+  font-family: var(--font-body);
+  font-weight: 900;
+
+  line-height: 1.05;
+  letter-spacing: -0.035em;
 }
 
 h1 {
-  font-size: clamp(3rem, 8vw, 7rem);
+  font-size: clamp(3rem, 8vw, 6.5rem);
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3.8rem);
 }
 
 h3 {
@@ -121,25 +139,36 @@ h3 {
 .tag,
 .label {
   margin: 0 0 14px;
+
   color: var(--red);
+
   font-family: var(--font-display);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+
   text-transform: uppercase;
 }
 
 .lede {
   max-width: 800px;
+
   margin: 24px 0 0;
+
   color: var(--muted);
+
   font-size: clamp(1.05rem, 2vw, 1.35rem);
 }
 
 .section-intro {
   max-width: 700px;
+
   margin: 18px 0 0;
+
   color: var(--muted);
+
   font-size: 1.05rem;
 }
 
@@ -160,6 +189,7 @@ h3 {
   padding: 14px clamp(18px, 4vw, 54px);
 
   background: rgba(245, 241, 231, 0.96);
+
   border-bottom: 2px solid var(--ink);
 
   backdrop-filter: blur(12px);
@@ -168,6 +198,7 @@ h3 {
 .brand {
   display: flex;
   align-items: center;
+
   gap: 12px;
 
   font-family: var(--font-display);
@@ -186,30 +217,34 @@ h3 {
   background: var(--red);
   color: var(--white);
 
-  font-family: var(--font-stereo);
-  font-size: 1.15rem;
-  letter-spacing: 0.02em;
+  font-family: var(--font-display);
+  font-size: 1rem;
 }
 
 .brand-text {
   font-family: var(--font-display);
-  font-size: 0.8rem;
+
+  font-size: 0.76rem;
   line-height: 1.05;
+
   text-transform: uppercase;
 }
 
 .nav {
   display: flex;
   align-items: center;
+
   gap: 24px;
 
   font-family: var(--font-display);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
+
   text-transform: uppercase;
 }
 
 .nav a {
   position: relative;
+
   padding: 8px 0;
 }
 
@@ -217,6 +252,7 @@ h3 {
   content: "";
 
   position: absolute;
+
   left: 0;
   bottom: 2px;
 
@@ -248,7 +284,8 @@ h3 {
   border: 2px solid var(--ink);
 
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
+
   text-transform: uppercase;
 
   cursor: pointer;
@@ -256,11 +293,12 @@ h3 {
 
 
 /* =========================================================
-   HERO VIDEO
+   HERO
    ========================================================= */
 
 .hero-video {
   position: relative;
+
   min-height: 82vh;
 
   overflow: hidden;
@@ -289,7 +327,7 @@ h3 {
       90deg,
       rgba(0, 0, 0, 0.78) 0%,
       rgba(0, 0, 0, 0.52) 48%,
-      rgba(0, 0, 0, 0.2) 100%
+      rgba(0, 0, 0, 0.18) 100%
     );
 
   z-index: 2;
@@ -319,6 +357,11 @@ h3 {
 
   font-family: var(--font-stereo);
 
+  font-size: clamp(3rem, 8vw, 7rem);
+
+  line-height: 0.91;
+  letter-spacing: -0.025em;
+
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
 
   animation: slideUp 0.7s ease;
@@ -336,8 +379,23 @@ h3 {
   color: var(--gold);
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+
+/* =========================================================
+   HERO ROUTE GRAPHIC
+   ========================================================= */
+
 .hero-route-line {
   position: absolute;
+
   right: 7%;
   bottom: 12%;
 
@@ -379,64 +437,8 @@ h3 {
 
 .hero-route-line span:last-child {
   margin-right: 0;
+
   border-color: var(--green);
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-
-  margin-top: 30px;
-}
-
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-.button,
-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-
-  padding: 14px 20px;
-
-  background: var(--gold);
-  color: var(--ink);
-
-  border: 2px solid var(--ink);
-
-  font-family: var(--font-display);
-  font-size: 0.78rem;
-  text-transform: uppercase;
-
-  cursor: pointer;
-
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease,
-    color 0.2s ease;
-}
-
-.button:hover {
-  color: var(--ink);
-  background: var(--white);
-  transform: translateY(-2px);
-}
-
-.button-secondary,
-.button.secondary {
-  background: transparent;
-  color: var(--white);
-  border-color: var(--white);
-}
-
-.button-secondary:hover,
-.button.secondary:hover {
-  background: var(--white);
-  color: var(--ink);
 }
 
 
@@ -478,18 +480,13 @@ button {
 
 .section-heading {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
 
   gap: 22px;
 
   margin-bottom: 34px;
 }
-
-
-/* =========================================================
-   COLOUR ROUTE BAR
-   ========================================================= */
 
 .section-heading::after {
   content: "";
@@ -507,6 +504,62 @@ button {
       var(--blue) 50% 75%,
       var(--green) 75% 100%
     );
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.button,
+button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 20px;
+
+  background: var(--gold);
+  color: var(--ink);
+
+  border: 2px solid var(--ink);
+
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+
+  line-height: 1;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.button:hover {
+  color: var(--ink);
+
+  background: var(--white);
+
+  transform: translateY(-2px);
+}
+
+.button-secondary,
+.button.secondary {
+  background: transparent;
+
+  color: var(--white);
+
+  border-color: var(--white);
+}
+
+.button-secondary:hover,
+.button.secondary:hover {
+  background: var(--white);
+  color: var(--ink);
 }
 
 
@@ -535,6 +588,7 @@ button {
 .team-grid,
 .contact-grid {
   display: grid;
+
   gap: 18px;
 }
 
@@ -560,13 +614,16 @@ button {
 .team-card:hover,
 .contact-card:hover {
   transform: translate(-3px, -3px);
-  box-shadow: 10px 10px 0 rgba(23, 23, 23, 0.15);
+
+  box-shadow:
+    10px 10px 0 rgba(23, 23, 23, 0.15);
 }
 
 .card::before {
   content: "";
 
   position: absolute;
+
   top: 0;
   left: 0;
   right: 0;
@@ -596,7 +653,9 @@ button {
   color: var(--red);
 
   font-family: var(--font-display);
-  font-size: 0.8rem;
+
+  font-size: 0.75rem;
+  line-height: 1;
 }
 
 .card-gold .card-number {
@@ -625,14 +684,18 @@ button {
 
 .card-link {
   position: absolute;
+
   bottom: 24px;
   left: 26px;
 
-  font-family: var(--font-display);
-  font-size: 0.72rem;
-  text-transform: uppercase;
-
   color: var(--red);
+
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+
+  line-height: 1;
+
+  text-transform: uppercase;
 }
 
 
@@ -642,6 +705,7 @@ button {
 
 .quote-section {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
 
   gap: 18px;
@@ -659,6 +723,7 @@ button {
   content: "";
 
   position: absolute;
+
   inset: 0 auto 0 0;
 
   width: 8px;
@@ -677,7 +742,8 @@ button {
 
   font-family: Georgia, serif;
   font-size: 5rem;
-  line-height: 0.6;
+
+  line-height: 0.5;
 }
 
 .quote p {
@@ -694,9 +760,11 @@ button {
   color: var(--red);
 
   font-family: var(--font-display);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
+
+  line-height: 1.1;
+
   text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 
@@ -706,6 +774,7 @@ button {
 
 .faq-list {
   display: grid;
+
   gap: 12px;
 }
 
@@ -734,8 +803,11 @@ button {
 
   list-style: none;
 
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 1rem;
+  font-weight: 800;
+
+  line-height: 1.25;
 }
 
 .faq-list summary::-webkit-details-marker {
@@ -754,7 +826,6 @@ button {
   background: var(--red);
   color: var(--white);
 
-  font-family: var(--font-body);
   font-size: 1.2rem;
   font-weight: 500;
 
@@ -766,11 +837,11 @@ button {
 }
 
 .faq-list details p {
+  max-width: 850px;
+
   margin: 0;
 
   padding: 0 24px 24px;
-
-  max-width: 850px;
 }
 
 
@@ -794,15 +865,13 @@ button {
   background: var(--red);
   color: var(--white);
 
-  border-radius: 0;
-
   font-family: var(--font-display);
   font-size: 1.1rem;
 }
 
 
 /* =========================================================
-   CALLOUTS / NEWS
+   NEWS / CALLOUTS
    ========================================================= */
 
 .callout,
@@ -816,16 +885,18 @@ button {
 
 .news-list {
   display: grid;
+
   gap: 18px;
 }
 
 .news-item {
-  padding: 24px;
-
   display: grid;
+
   grid-template-columns: 1fr 130px;
 
   gap: 24px;
+
+  padding: 24px;
 
   transition:
     transform 0.2s ease,
@@ -834,7 +905,9 @@ button {
 
 .news-item:hover {
   transform: translate(-3px, -3px);
-  box-shadow: 10px 10px 0 rgba(23, 23, 23, 0.12);
+
+  box-shadow:
+    10px 10px 0 rgba(23, 23, 23, 0.12);
 }
 
 .news-item span,
@@ -842,7 +915,9 @@ button {
   color: var(--red);
 
   font-family: var(--font-display);
-  font-size: 0.75rem;
+
+  font-size: 0.7rem;
+
   text-transform: uppercase;
 }
 
@@ -904,8 +979,10 @@ button {
 
   color: var(--white);
 
-  font-family: var(--font-stereo);
-  font-size: 1.8rem;
+  font-family: var(--font-display);
+
+  font-size: 1.5rem;
+
   line-height: 1;
 }
 
@@ -919,8 +996,13 @@ button {
   color: var(--gold);
 
   font-family: var(--font-display);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
+
+  font-size: 0.72rem;
+
+  line-height: 1;
+
+  letter-spacing: 0.06em;
+
   text-transform: uppercase;
 }
 
@@ -942,6 +1024,7 @@ button {
 
 .footer .small {
   font-size: 0.84rem;
+
   opacity: 0.75;
 }
 
@@ -953,6 +1036,7 @@ button {
   padding-top: 18px;
 
   display: flex;
+
   justify-content: space-between;
 
   gap: 16px;
@@ -960,9 +1044,14 @@ button {
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 
   font-family: var(--font-display);
-  font-size: 0.68rem;
+
+  font-size: 0.65rem;
+
+  line-height: 1.2;
+
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+
+  letter-spacing: 0.04em;
 }
 
 .footer-bottom p {
@@ -1000,6 +1089,7 @@ button {
 
 .article-sidebar {
   position: sticky;
+
   top: 100px;
 
   align-self: start;
@@ -1023,6 +1113,7 @@ button {
 
 .article-body h2 {
   margin-top: 42px;
+
   margin-bottom: 12px;
 }
 
@@ -1043,7 +1134,9 @@ button {
   border-left: 8px solid var(--gold);
 
   font-family: Georgia, serif;
+
   font-size: 1.5rem;
+
   line-height: 1.2;
 }
 
@@ -1100,9 +1193,11 @@ button {
   color: var(--red);
 
   font-family: var(--font-display);
-  font-size: 0.72rem;
+
+  font-size: 0.7rem;
 
   text-transform: uppercase;
+
   letter-spacing: 0.06em;
 }
 
@@ -1119,7 +1214,11 @@ button {
   border-radius: 0;
 
   font-family: var(--font-display);
-  font-size: 0.72rem;
+
+  font-size: 0.68rem;
+
+  line-height: 1;
+
   text-transform: uppercase;
 }
 
@@ -1182,8 +1281,6 @@ button {
   border: 2px solid var(--ink);
 
   box-shadow: 6px 6px 0 rgba(23, 23, 23, 0.2);
-
-  border-radius: 0;
 }
 
 
@@ -1253,9 +1350,11 @@ button {
   border: 1px solid var(--gold);
 
   font-family: var(--font-display);
+
   font-size: 0.68rem;
 
   text-transform: uppercase;
+
   letter-spacing: 0.06em;
 }
 
@@ -1279,6 +1378,7 @@ button {
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
   background: var(--ink);
+
   color: var(--white);
 
   border: 1px solid var(--line);
@@ -1324,11 +1424,13 @@ button {
 @keyframes slideUp {
   from {
     opacity: 0;
+
     transform: translateY(24px);
   }
 
   to {
     opacity: 1;
+
     transform: translateY(0);
   }
 }
@@ -1357,12 +1459,13 @@ button {
 
 .reveal.visible {
   opacity: 1;
+
   transform: translateY(0);
 }
 
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE — TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -1377,6 +1480,7 @@ button {
     position: absolute;
 
     top: 76px;
+
     left: 18px;
     right: 18px;
 
@@ -1389,6 +1493,7 @@ button {
     box-shadow: 7px 7px 0 rgba(23, 23, 23, 0.12);
 
     flex-direction: column;
+
     align-items: flex-start;
   }
 
@@ -1411,6 +1516,7 @@ button {
 
   .section-heading {
     align-items: flex-start;
+
     flex-direction: column;
   }
 
@@ -1440,6 +1546,10 @@ button {
 }
 
 
+/* =========================================================
+   RESPONSIVE — MAPS
+   ========================================================= */
+
 @media (max-width: 800px) {
 
   #sydney-map {
@@ -1459,9 +1569,12 @@ button {
     border-right: 0;
     border-bottom: 0;
   }
-
 }
 
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
 
 @media (max-width: 600px) {
 
@@ -1496,6 +1609,7 @@ button {
 
   .hero-actions {
     flex-direction: column;
+
     align-items: stretch;
   }
 
@@ -1511,7 +1625,6 @@ button {
   .quote {
     padding: 28px;
   }
-
 }
 
 
@@ -1525,8 +1638,9 @@ button {
   *::before,
   *::after {
     animation: none !important;
+
     transition: none !important;
+
     scroll-behavior: auto !important;
   }
-
 }
