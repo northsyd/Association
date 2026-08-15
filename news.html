@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>News &amp; Media | North Sydney Transport Association</title>
+  <title>News, Submissions &amp; Media Releases | North Sydney Transport Association</title>
 
   <meta
     name="description"
@@ -15,17 +15,17 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
+
 <body>
 
-  <!-- HEADER -->
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
 
   <header class="site-header">
 
-    <a
-      class="brand"
-      href="index.html"
-      aria-label="NSTA home"
-    >
+    <a class="brand" href="index.html">
+
       <span class="brand-mark">
         NSTA
       </span>
@@ -34,22 +34,21 @@
         North Sydney<br>
         Transport Association
       </span>
+
     </a>
+
 
     <button
       class="menu-toggle"
       aria-label="Open menu"
       aria-expanded="false"
-      type="button"
     >
       Menu
     </button>
 
-    <nav
-      class="nav"
-      data-nav
-      aria-label="Main navigation"
-    >
+
+    <nav class="nav" data-nav>
+
       <a href="index.html">
         Introduction &amp; About
       </a>
@@ -58,59 +57,55 @@
         Who We Are
       </a>
 
-      <a
-        class="active"
-        href="news.html"
-      >
+      <a class="active" href="news.html">
         News &amp; Media
       </a>
 
       <a href="contact.html">
         Discord &amp; Contact
       </a>
+
     </nav>
 
   </header>
 
 
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
   <main>
 
-    <!-- PAGE HERO -->
+
+    <!-- ===================================================
+         HERO
+         =================================================== -->
 
     <section class="page-hero">
 
       <p class="eyebrow">
-        NSTA / News &amp; media
+        News / submissions / projects / media releases
       </p>
 
       <h1>
-        Our work,<br>
-        in public.
+        What NSTA is<br>
+        doing and saying.
       </h1>
 
       <p class="lede">
-        Follow NSTA's submissions, projects and media
-        releases as our advocacy develops.
+        Explore our submissions, projects and media releases,
+        from transport policy and infrastructure to the issues
+        affecting passengers across Sydney.
       </p>
 
     </section>
 
 
-    <!-- FEATURED -->
+    <!-- ===================================================
+         FEATURED
+         =================================================== -->
 
     <section class="section">
-
-      <div class="section-heading">
-
-        <p class="eyebrow">
-          Featured
-        </p>
-
-        <h2>
-          Latest from NSTA.
-        </h2>
-
-      </div>
 
       <div
         class="featured-news"
@@ -120,24 +115,25 @@
     </section>
 
 
-    <!-- ARCHIVE -->
+    <!-- ===================================================
+         NEWS ARCHIVE
+         =================================================== -->
 
     <section class="section">
 
       <div class="section-heading">
 
-        <p class="eyebrow">
-          01 / Archive
-        </p>
+        <div>
 
-        <h2>
-          Browse our work.
-        </h2>
+          <p class="eyebrow">
+            Archive
+          </p>
 
-        <p class="section-intro">
-          Filter NSTA's published work by the type of
-          advocacy or communication.
-        </p>
+          <h2>
+            Explore NSTA's work.
+          </h2>
+
+        </div>
 
       </div>
 
@@ -147,81 +143,73 @@
       <div
         class="news-filters"
         role="group"
-        aria-label="Filter news"
+        aria-label="Filter news by category"
       >
 
         <button
-          class="news-filter active"
+          class="active"
           type="button"
           data-filter="all"
-          aria-pressed="true"
         >
           All
         </button>
 
         <button
-          class="news-filter"
           type="button"
-          data-filter="submissions"
-          aria-pressed="false"
+          data-filter="Media Release"
+        >
+          Media Releases
+        </button>
+
+        <button
+          type="button"
+          data-filter="Submission"
         >
           Submissions
         </button>
 
         <button
-          class="news-filter"
           type="button"
-          data-filter="projects"
-          aria-pressed="false"
+          data-filter="Project"
         >
           Projects
-        </button>
-
-        <button
-          class="news-filter"
-          type="button"
-          data-filter="media-releases"
-          aria-pressed="false"
-        >
-          Media Releases
         </button>
 
       </div>
 
 
-      <!-- RESULTS -->
+      <!-- ARTICLES -->
 
       <div
         class="news-list"
         id="news-list"
       ></div>
 
-      <p
-        class="news-empty"
-        id="news-empty"
-        hidden
-      >
-        No articles have been published in this category yet.
-      </p>
-
     </section>
+
 
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
 
   <footer class="footer">
 
     <div class="footer-grid">
 
-      <div class="footer-main">
+
+      <!-- BRAND -->
+
+      <div>
 
         <a
           class="footer-brand"
           href="index.html"
         >
-          North Sydney Transport Association
+          North Sydney<br>
+          Transport Association
         </a>
 
         <p>
@@ -238,7 +226,9 @@
       </div>
 
 
-      <div class="footer-column">
+      <!-- PAGES -->
+
+      <div>
 
         <h3>
           Pages
@@ -263,7 +253,9 @@
       </div>
 
 
-      <div class="footer-column">
+      <!-- CONTACT -->
+
+      <div>
 
         <h3>
           Contact
@@ -274,9 +266,9 @@
         </a>
 
         <a
-          href="https://www.instagram.com/northsydneytransport_org"
+          href="https://www.instagram.com/northsydney_transport_org"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
         >
           Instagram
         </a>
@@ -284,7 +276,7 @@
         <a
           href="https://discord.gg/wrxN6MrN6j"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
         >
           Discord
         </a>
@@ -292,7 +284,9 @@
       </div>
 
 
-      <div class="footer-column">
+      <!-- ACKNOWLEDGEMENT -->
+
+      <div>
 
         <h3>
           Acknowledgement
@@ -305,6 +299,7 @@
 
       </div>
 
+
     </div>
 
 
@@ -315,14 +310,18 @@
         North Sydney Transport Association
       </p>
 
-      <p class="footer-location">
-        NSW / AUSTRALIA
+      <p>
+        NSW's First Youth Transport Advocacy Group
       </p>
 
     </div>
 
   </footer>
 
+
+  <!-- =====================================================
+       SCRIPTS
+       ===================================================== -->
 
   <script src="news-data.js"></script>
   <script src="news-render.js"></script>
