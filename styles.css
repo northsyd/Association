@@ -112,22 +112,22 @@ a:hover {
 /*
    TYPOGRAPHIC SYSTEM
 
-   Inter:
-   - Main headings
-   - Body copy
-   - Cards
-   - Long-form content
-
    Retro Mono Wide:
-   - NSTA labels
+   - Page titles
+   - Card headings
+   - Small interface headings
+   - Labels
    - Navigation
-   - Eyebrows
    - Metadata
-   - Buttons
-   - Transport-style interface text
+
+   Inter:
+   - Homepage hero
+   - Section headings
+   - Body copy
+   - Descriptions
 
    Retro Stereo Wide:
-   - Decorative oversized words only
+   - Decorative display text only
 */
 
 
@@ -135,33 +135,35 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 
-/* MAIN HEADINGS */
+/* ---------------------------------------------------------
+   H1 — RETRO MONO WIDE
+   Used automatically for page/article titles.
+   --------------------------------------------------------- */
 
 h1,
-.hero h1,
-.hero-content h1,
 .page-hero h1,
 .article-hero h1 {
-  font-family:
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    sans-serif;
+  font-family: "Retro Mono Wide", monospace;
 
-  font-weight: 850;
+  font-weight: 700;
 
-  letter-spacing: -0.055em;
-  line-height: 0.94;
+  text-transform: uppercase;
+
+  letter-spacing: .015em;
+
+  line-height: .94;
 
   text-wrap: balance;
 }
 
 
-/* SECTION HEADINGS */
+/* ---------------------------------------------------------
+   H2 — CLEAN EDITORIAL
+   --------------------------------------------------------- */
 
 h2 {
   font-family:
@@ -171,26 +173,35 @@ h2 {
     sans-serif;
 
   font-size:
-    clamp(1.9rem, 3.2vw, 3.2rem);
+    clamp(1.8rem, 3.2vw, 3.2rem);
 
-  letter-spacing: -0.045em;
+  font-weight: 800;
+
+  letter-spacing: -0.035em;
+
   line-height: 1.02;
+
+  text-wrap: balance;
 }
 
 
-/* SMALL HEADINGS */
+/* ---------------------------------------------------------
+   H3 — RETRO MONO WIDE
+   Used automatically for cards / smaller headings.
+   --------------------------------------------------------- */
 
 h3 {
-  font-family:
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    sans-serif;
+  font-family: "Retro Mono Wide", monospace;
 
-  font-size: 1.35rem;
+  font-size: 1.15rem;
 
-  letter-spacing: -0.025em;
-  line-height: 1.1;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: .015em;
+
+  line-height: 1.05;
 }
 
 p {
@@ -199,7 +210,48 @@ p {
 
 
 /* =========================================================
-   RETRO MONO TYPOGRAPHY
+   HOMEPAGE HERO TYPOGRAPHY
+   ========================================================= */
+
+/*
+   The homepage hero intentionally does NOT use
+   Retro Stereo Wide.
+
+   It is cleaner and more readable at large sizes.
+*/
+
+.hero h1,
+.hero-content h1 {
+  max-width: 760px;
+
+  margin: 0;
+
+  color: white;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+
+  font-size:
+    clamp(2.8rem, 5.5vw, 5.2rem);
+
+  font-weight: 850;
+
+  letter-spacing: -0.045em;
+
+  line-height: .92;
+
+  text-transform: none;
+
+  text-shadow:
+    0 4px 24px rgba(0,0,0,.5);
+}
+
+
+/* =========================================================
+   RETRO / LABEL TYPOGRAPHY
    ========================================================= */
 
 .eyebrow,
@@ -217,22 +269,17 @@ p {
 
   text-transform: uppercase;
 
-  /*
-     The font is already wide.
-     Positive tracking gives the characters room
-     without making it look stretched.
-  */
-  letter-spacing: 0.025em;
+  letter-spacing: .015em;
 
-  line-height: 1.15;
+  line-height: 1;
 
-  font-kerning: none;
+  font-kerning: normal;
 }
 
 .eyebrow {
   color: var(--blue);
 
-  font-size: .7rem;
+  font-size: .72rem;
 
   margin: 0 0 18px;
 }
@@ -240,7 +287,7 @@ p {
 .tag {
   color: var(--red);
 
-  font-size: .67rem;
+  font-size: .68rem;
 
   margin: 0 0 12px;
 }
@@ -252,30 +299,12 @@ p {
 
 
 /* =========================================================
-   DECORATIVE RETRO TEXT
-   ========================================================= */
-
-.retro-display {
-  font-family: "Retro Stereo Wide", sans-serif;
-
-  font-weight: 700;
-
-  letter-spacing: 0;
-  line-height: .8;
-
-  text-transform: uppercase;
-}
-
-
-/* =========================================================
    HEADER
    ========================================================= */
 
 .site-header {
   position: sticky;
-
   top: 0;
-
   z-index: 1000;
 
   display: flex;
@@ -286,7 +315,7 @@ p {
     15px
     clamp(18px, 4vw, 54px);
 
-  background: rgba(250, 247, 239, .94);
+  background: rgba(250,247,239,.94);
 
   backdrop-filter: blur(14px);
 
@@ -295,7 +324,6 @@ p {
 
 .brand {
   display: flex;
-
   align-items: center;
 
   gap: 12px;
@@ -305,7 +333,6 @@ p {
 
 .brand-mark {
   display: grid;
-
   place-items: center;
 
   min-width: 58px;
@@ -320,36 +347,36 @@ p {
 
   font-size: .78rem;
 
-  letter-spacing: .025em;
+  letter-spacing: .015em;
 
   line-height: 1;
 }
 
 .brand-text {
   font-size: .82rem;
-
   line-height: 1.05;
 }
 
 
-/* NAVIGATION */
+/* ---------------------------------------------------------
+   NAVIGATION
+   --------------------------------------------------------- */
 
 .nav {
   display: flex;
-
   align-items: center;
 
   gap: 22px;
 
   font-family: "Retro Mono Wide", monospace;
 
-  font-size: .62rem;
+  font-size: .64rem;
 
   text-transform: uppercase;
 
-  letter-spacing: .025em;
+  letter-spacing: .015em;
 
-  line-height: 1.15;
+  line-height: 1;
 }
 
 .nav a {
@@ -389,18 +416,17 @@ p {
   padding: 9px 13px;
 
   background: transparent;
-
   color: var(--ink);
 
   border: 1px solid var(--line-strong);
 
   font-family: "Retro Mono Wide", monospace;
 
-  font-size: .63rem;
+  font-size: .65rem;
 
   text-transform: uppercase;
 
-  letter-spacing: .025em;
+  letter-spacing: .015em;
 }
 
 
@@ -423,16 +449,9 @@ button {
   padding: 13px 18px;
 
   background: var(--red);
-
   color: white;
 
   border: 1px solid var(--red);
-
-  font-family:
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    sans-serif;
 
   font-weight: 800;
 
@@ -455,7 +474,6 @@ button {
 .button-secondary,
 .button.secondary {
   background: transparent;
-
   color: var(--ink);
 
   border-color: var(--line-strong);
@@ -467,7 +485,7 @@ button {
 
   border-color: var(--red);
 
-  background: rgba(135, 39, 27, .04);
+  background: rgba(135,39,27,.04);
 }
 
 
@@ -483,8 +501,6 @@ button {
   min-height: 560px;
 
   overflow: hidden;
-
-  border-bottom: 5px solid var(--red);
 }
 
 .hero-video video {
@@ -508,9 +524,9 @@ button {
   background:
     linear-gradient(
       90deg,
-      rgba(10, 16, 22, .78) 0%,
-      rgba(10, 16, 22, .52) 48%,
-      rgba(10, 16, 22, .18) 100%
+      rgba(10,16,22,.78) 0%,
+      rgba(10,16,22,.52) 48%,
+      rgba(10,16,22,.18) 100%
     );
 
   z-index: 2;
@@ -549,24 +565,6 @@ button {
 
   text-shadow:
     0 2px 12px rgba(0,0,0,.45);
-}
-
-.hero-content h1 {
-  max-width: 900px;
-
-  margin: 0;
-
-  color: white;
-
-  font-size:
-    clamp(3.2rem, 7.2vw, 6.8rem);
-
-  letter-spacing: -0.055em;
-
-  line-height: .88;
-
-  text-shadow:
-    0 4px 24px rgba(0,0,0,.5);
 }
 
 .hero-content .lede {
@@ -609,11 +607,11 @@ button {
   max-width: 950px;
 
   font-size:
-    clamp(3rem, 7vw, 6.5rem);
+    clamp(2.8rem, 6vw, 5.5rem);
 
-  letter-spacing: -0.055em;
+  letter-spacing: .015em;
 
-  line-height: .9;
+  line-height: .94;
 }
 
 .page-hero .lede,
@@ -642,15 +640,6 @@ button {
     24px;
 
   border-bottom: 1px solid var(--line);
-}
-
-/*
-   Subtle alternating paper tones.
-   Keeps the page light without looking flat.
-*/
-
-.section:nth-of-type(even) {
-  background: var(--paper-deep);
 }
 
 .section-heading {
@@ -692,12 +681,13 @@ button {
 
   border: 1px solid var(--line);
 
-  box-shadow: none;
+  box-shadow:
+    0 8px 25px rgba(40,34,25,.07);
 
   transition:
-    transform .2s ease,
-    box-shadow .2s ease,
-    border-color .2s ease;
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
 }
 
 .feature-card,
@@ -726,12 +716,12 @@ button {
 .featured-news:hover,
 .news-item:hover {
 
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 
-  border-color: var(--red);
+  border-color: rgba(135,39,27,.35);
 
   box-shadow:
-    0 8px 20px rgba(40, 34, 25, .08);
+    0 15px 35px rgba(40,34,25,.11);
 }
 
 
@@ -748,7 +738,8 @@ button {
 }
 
 .card-grid.four {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns:
+    repeat(4, 1fr);
 }
 
 
@@ -757,7 +748,8 @@ button {
    ========================================================= */
 
 .team-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, 1fr);
 }
 
 .team-card {
@@ -805,20 +797,18 @@ button {
   height: 68px;
 
   display: grid;
-
   place-items: center;
 
   margin-bottom: 22px;
 
   background: var(--red);
-
   color: white;
 
   font-family: "Retro Mono Wide", monospace;
 
   font-size: .8rem;
 
-  letter-spacing: .025em;
+  letter-spacing: .015em;
 
   line-height: 1;
 }
@@ -856,9 +846,9 @@ button {
 
   font-size: .58rem;
 
-  letter-spacing: .025em;
+  letter-spacing: .015em;
 
-  line-height: 1.25;
+  line-height: 1.15;
 
   overflow-wrap: anywhere;
 }
@@ -888,8 +878,7 @@ button {
   position: absolute;
 
   right: -20px;
-
-  bottom: -45px;
+  bottom: -55px;
 
   font-family: "Retro Stereo Wide", sans-serif;
 
@@ -897,7 +886,7 @@ button {
 
   line-height: .8;
 
-  letter-spacing: 0;
+  letter-spacing: -0.06em;
 
   color: rgba(220,161,39,.10);
 
@@ -914,8 +903,6 @@ button {
   color: var(--gold);
 
   font-size: .68rem;
-
-  letter-spacing: .025em;
 }
 
 .team-intro p {
@@ -934,43 +921,27 @@ button {
 .quote-section {
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    1fr 1fr;
 
   gap: 18px;
 }
 
 .quote {
   padding: 28px;
-
-  border-top: 4px solid var(--blue);
-}
-
-.quote:nth-child(2) {
-  border-top-color: var(--gold);
 }
 
 .quote p {
   margin: 0 0 18px;
 
-  /*
-     Use Inter here.
-     Stereo Wide is reserved for decorative display text.
-  */
-
-  font-family:
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    sans-serif;
+  font-family: "Retro Mono Wide", monospace;
 
   font-size:
-    clamp(1.2rem, 2.4vw, 2rem);
+    clamp(1.15rem, 2.2vw, 1.8rem);
 
-  font-weight: 750;
+  letter-spacing: .01em;
 
-  letter-spacing: -0.035em;
-
-  line-height: 1.08;
+  line-height: 1.05;
 }
 
 .quote span {
@@ -980,9 +951,9 @@ button {
 
   font-size: .65rem;
 
-  letter-spacing: .025em;
+  letter-spacing: .015em;
 
-  line-height: 1.15;
+  line-height: 1;
 
   text-transform: uppercase;
 }
@@ -1005,13 +976,22 @@ button {
 .faq-list summary {
   cursor: pointer;
 
-  font-weight: 800;
+  font-family: "Retro Mono Wide", monospace;
 
-  font-size: 1.05rem;
+  font-weight: 700;
+
+  font-size: 1rem;
+
+  letter-spacing: .015em;
+
+  line-height: 1.05;
+
+  text-transform: uppercase;
 }
 
 .faq-list details[open] {
-  border-color: var(--blue);
+  border-color:
+    rgba(22,118,188,.55);
 }
 
 .faq-list details p {
@@ -1041,8 +1021,7 @@ button {
   position: absolute;
 
   right: -25px;
-
-  bottom: -35px;
+  bottom: -40px;
 
   font-family: "Retro Stereo Wide", sans-serif;
 
@@ -1050,7 +1029,7 @@ button {
 
   line-height: .8;
 
-  letter-spacing: 0;
+  letter-spacing: -0.06em;
 
   color: rgba(22,118,188,.08);
 
@@ -1095,7 +1074,8 @@ button {
 
   display: grid;
 
-  grid-template-columns: 1fr 130px;
+  grid-template-columns:
+    1fr 130px;
 
   gap: 24px;
 }
@@ -1108,7 +1088,8 @@ button {
 .join-hero {
   display: grid;
 
-  grid-template-columns: 1.2fr .8fr;
+  grid-template-columns:
+    1.2fr .8fr;
 
   gap: 22px;
 
@@ -1117,8 +1098,6 @@ button {
 
 .discord-box {
   padding: 28px;
-
-  border-top: 5px solid var(--blue);
 }
 
 
@@ -1158,18 +1137,15 @@ button {
 
   margin-bottom: 14px;
 
-  /*
-     Stereo Wide is okay here because this is
-     short decorative branding rather than a paragraph.
-  */
+  font-family: "Retro Mono Wide", monospace;
 
-  font-family: "Retro Stereo Wide", sans-serif;
+  font-size: 1.2rem;
 
-  font-size: 1.35rem;
+  line-height: .95;
 
-  line-height: .85;
+  letter-spacing: .015em;
 
-  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .footer h3 {
@@ -1181,9 +1157,9 @@ button {
 
   text-transform: uppercase;
 
-  letter-spacing: .035em;
+  letter-spacing: .015em;
 
-  line-height: 1.15;
+  line-height: 1;
 
   color: var(--gold);
 }
@@ -1241,7 +1217,8 @@ button {
 
   display: grid;
 
-  grid-template-columns: 280px 1fr;
+  grid-template-columns:
+    280px 1fr;
 
   gap: 50px;
 }
@@ -1259,9 +1236,8 @@ button {
 
   border: 1px solid var(--line);
 
-  box-shadow: none;
-
-  border-top: 4px solid var(--blue);
+  box-shadow:
+    0 8px 25px rgba(40,34,25,.07);
 }
 
 .article-sidebar p {
@@ -1292,21 +1268,15 @@ button {
 
   border-left: 5px solid var(--gold);
 
-  background: var(--panel-alt);
+  background: var(--panel);
 
-  font-family:
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    sans-serif;
+  font-family: "Retro Mono Wide", monospace;
 
-  font-size: 1.35rem;
+  font-size: 1.2rem;
 
-  font-weight: 750;
+  letter-spacing: .01em;
 
-  letter-spacing: -0.025em;
-
-  line-height: 1.12;
+  line-height: 1.05;
 }
 
 .article-body figure {
@@ -1320,7 +1290,8 @@ button {
 
   cursor: zoom-in;
 
-  transition: transform .4s ease;
+  transition:
+    transform .4s ease;
 }
 
 .article-body figure:hover img {
@@ -1368,9 +1339,9 @@ button {
 
   text-transform: uppercase;
 
-  letter-spacing: .025em;
+  letter-spacing: .015em;
 
-  line-height: 1.15;
+  line-height: 1;
 }
 
 .stance {
@@ -1435,7 +1406,8 @@ button {
 
   opacity: 0;
 
-  transition: opacity .25s ease;
+  transition:
+    opacity .25s ease;
 
   z-index: 9999;
 }
@@ -1474,7 +1446,7 @@ button {
   background: var(--panel);
 
   box-shadow:
-    0 8px 25px rgba(40,34,25,.08);
+    0 10px 30px rgba(40,34,25,.10);
 }
 
 #sydney-map {
@@ -1487,11 +1459,9 @@ button {
   position: absolute;
 
   right: 22px;
-
   bottom: 22px;
 
   width: 310px;
-
   height: 230px;
 
   overflow: hidden;
@@ -1503,7 +1473,7 @@ button {
   background: var(--panel);
 
   box-shadow:
-    0 8px 20px rgba(40,34,25,.16);
+    0 10px 25px rgba(40,34,25,.20);
 
   z-index: 500;
 }
@@ -1518,12 +1488,11 @@ button {
   position: absolute;
 
   top: 10px;
-
   left: 10px;
 
   z-index: 700;
 
-  background: rgba(255,253,248,.95);
+  background: rgba(250,248,242,.94);
 
   color: var(--red);
 
@@ -1535,21 +1504,20 @@ button {
 
   font-size: .62rem;
 
-  letter-spacing: .025em;
+  letter-spacing: .015em;
 
-  line-height: 1.1;
+  line-height: 1;
 }
 
 .school-marker span {
   display: block;
 
   width: 18px;
-
   height: 18px;
 
   background: var(--gold);
 
-  border: 3px solid white;
+  border: 3px solid #fff;
 
   border-radius: 50%;
 
@@ -1591,27 +1559,6 @@ button {
   color: var(--muted);
 
   font-size: .95rem;
-}
-
-
-/* =========================================================
-   COLOUR UTILITY ELEMENTS
-   ========================================================= */
-
-.accent-red {
-  color: var(--red);
-}
-
-.accent-gold {
-  color: var(--gold);
-}
-
-.accent-blue {
-  color: var(--blue);
-}
-
-.accent-green {
-  color: var(--green);
 }
 
 
@@ -1690,7 +1637,6 @@ button {
     top: 74px;
 
     left: 18px;
-
     right: 18px;
 
     padding: 18px;
@@ -1725,21 +1671,21 @@ button {
 
   .hero-content h1 {
     font-size:
-      clamp(2.8rem, 12vw, 5rem);
+      clamp(2.6rem, 10vw, 4.2rem);
 
-    letter-spacing: -0.045em;
+    letter-spacing: -0.035em;
 
-    line-height: .9;
+    line-height: .92;
   }
 
   .page-hero h1,
   .article-hero h1 {
     font-size:
-      clamp(2.8rem, 12vw, 5rem);
+      clamp(2.6rem, 10vw, 4.8rem);
 
-    letter-spacing: -0.045em;
+    letter-spacing: .01em;
 
-    line-height: .9;
+    line-height: .94;
   }
 
   .section {
@@ -1806,6 +1752,10 @@ button {
 }
 
 
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
 @media (max-width: 600px) {
 
   .site-header {
@@ -1822,11 +1772,11 @@ button {
 
   .hero-content h1 {
     font-size:
-      clamp(2.6rem, 13vw, 4.2rem);
+      clamp(2.35rem, 11vw, 3.5rem);
 
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
 
-    line-height: .9;
+    line-height: .94;
   }
 
   .hero-content .lede {
@@ -1840,6 +1790,16 @@ button {
     padding-top: 58px;
 
     padding-bottom: 48px;
+  }
+
+  .page-hero h1,
+  .article-hero h1 {
+    font-size:
+      clamp(2.35rem, 11vw, 4rem);
+
+    letter-spacing: .005em;
+
+    line-height: .95;
   }
 
   .callout {
