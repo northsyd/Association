@@ -722,6 +722,16 @@ main {
   margin-bottom: 0.3rem;
 }
 
+.team-email {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
 .team-role {
   font-family: "Retro Mono Wide", "Courier New", monospace;
 
