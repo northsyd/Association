@@ -265,7 +265,7 @@ main {
 .hero h1 {
   font-size: clamp(3rem, 7vw, 7rem);
 
-  line-height: 0.95;
+  line-height: 1.15;
 
   margin-bottom: 1.5rem;
 
@@ -515,7 +515,7 @@ main {
 .page-hero h1 {
   font-size: clamp(2.8rem, 6vw, 6rem);
 
-  line-height: 0.95;
+  line-height: 1.15;
 
   margin-bottom: 1rem;
 }
