@@ -5,286 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>North Sydney Transport Association</title>
-  <meta name="description" content="The North Sydney Transport Association is NSW's first youth-led transport advocacy organisation.">
+  <meta
+    name="description"
+    content="The North Sydney Transport Association is NSW's first youth-led transport advocacy organisation."
+  >
 
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* ================================
-       NSTA HOMEPAGE
-       ================================ */
-
-    .hero {
-      min-height: 72vh;
-      display: flex;
-      align-items: center;
-      padding: 5rem 7%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-content {
-      max-width: 900px;
-    }
-
-    .hero-eyebrow {
-      font-family: "Retro Mono Wide", monospace;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.85rem;
-      margin-bottom: 1.25rem;
-      opacity: 0.8;
-    }
-
-    .hero h1 {
-      font-family: "Retro Mono Wide", monospace;
-      font-size: clamp(3rem, 7vw, 7rem);
-      line-height: 0.95;
-      margin: 0 0 1.5rem;
-      max-width: 1000px;
-    }
-
-    .hero p {
-      max-width: 680px;
-      font-size: 1.25rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 0.9rem 1.4rem;
-      text-decoration: none;
-      font-weight: 700;
-      border: 2px solid currentColor;
-      transition: transform 0.15s ease, opacity 0.15s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-      opacity: 0.85;
-    }
-
-    .button-primary {
-      background: #87271b;
-      color: #fff;
-      border-color: #87271b;
-    }
-
-    .button-secondary {
-      color: inherit;
-      background: transparent;
-    }
-
-    .section {
-      padding: 5rem 7%;
-    }
-
-    .section-header {
-      max-width: 800px;
-      margin-bottom: 2.5rem;
-    }
-
-    .section-label {
-      font-family: "Retro Mono Wide", monospace;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.75rem;
-      opacity: 0.7;
-    }
-
-    .section h2 {
-      font-family: "Retro Mono Wide", monospace;
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      line-height: 1;
-      margin: 0 0 1rem;
-    }
-
-    .section-header p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-    }
-
-    .project-grid,
-    .news-grid,
-    .link-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
-
-    .card {
-      border: 2px solid currentColor;
-      padding: 1.5rem;
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      min-height: 220px;
-      transition: transform 0.15s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-    }
-
-    .card-tag {
-      font-family: "Retro Mono Wide", monospace;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      opacity: 0.65;
-      margin-bottom: 1rem;
-    }
-
-    .card h3 {
-      font-family: "Retro Mono Wide", monospace;
-      font-size: 1.35rem;
-      line-height: 1.1;
-      margin: 0 0 0.75rem;
-    }
-
-    .card p {
-      line-height: 1.5;
-      margin: 0;
-    }
-
-    .card-arrow {
-      margin-top: auto;
-      padding-top: 1.5rem;
-      font-weight: 700;
-    }
-
-    .work-section {
-      background: #f2ead8;
-    }
-
-    .news-section {
-      background: #1676bc;
-      color: #fff;
-    }
-
-    .news-section .card {
-      border-color: rgba(255,255,255,0.8);
-    }
-
-    .about-section {
-      background: #dca127;
-    }
-
-    .about-layout {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 4rem;
-      align-items: start;
-    }
-
-    .about-copy {
-      font-size: 1.15rem;
-      line-height: 1.7;
-    }
-
-    .about-stat {
-      border-top: 2px solid currentColor;
-      padding-top: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .about-stat strong {
-      display: block;
-      font-family: "Retro Mono Wide", monospace;
-      font-size: 2rem;
-      line-height: 1;
-      margin-bottom: 0.4rem;
-    }
-
-    .governance-section {
-      background: #28b674;
-    }
-
-    .cta-section {
-      background: #87271b;
-      color: #fff;
-      text-align: center;
-    }
-
-    .cta-section .section-header {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cta-section .button-secondary {
-      color: #fff;
-    }
-
-    @media (max-width: 900px) {
-      .project-grid,
-      .news-grid,
-      .link-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .about-layout {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .hero {
-        min-height: auto;
-        padding: 4rem 6%;
-      }
-
-      .section {
-        padding: 4rem 6%;
-      }
-
-      .project-grid,
-      .news-grid,
-      .link-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 3rem;
-      }
-
-      .hero p {
-        font-size: 1.05rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <nav>
-      <a href="/" class="logo">NSTA</a>
-
-      <div class="nav-links">
-        <a href="/about/">About</a>
-        <a href="/projects/">Projects</a>
-        <a href="/newsroom/">Newsroom</a>
-        <a href="/governance/">Governance</a>
-        <a href="/get-involved/">Get Involved</a>
-      </div>
-    </nav>
-  </header>
+  <!-- Shared Header -->
+  <div id="site-header"></div>
 
 
-  <!-- HERO -->
   <main>
 
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-content">
 
@@ -432,6 +169,7 @@
           <h2>Young people should have a say in transport.</h2>
 
           <div class="about-copy">
+
             <p>
               NSTA is a youth-led transport advocacy organisation focused on
               improving public transport through research, community advocacy,
@@ -446,8 +184,10 @@
             <a href="/about/" class="button button-secondary">
               Learn about NSTA
             </a>
+
           </div>
         </div>
+
 
         <div>
 
@@ -477,6 +217,7 @@
     <section class="section governance-section">
 
       <div class="section-header">
+
         <div class="section-label">Governance</div>
 
         <h2>Open, accountable and organised.</h2>
@@ -485,11 +226,14 @@
           NSTA publishes key organisational information so members and the
           public can understand how the Association operates.
         </p>
+
       </div>
+
 
       <div class="link-grid">
 
         <a href="/governance/" class="card">
+
           <div class="card-tag">Governance</div>
 
           <h3>Our Constitution</h3>
@@ -499,9 +243,12 @@
           </p>
 
           <div class="card-arrow">View governance →</div>
+
         </a>
 
+
         <a href="/governance/minutes/" class="card">
+
           <div class="card-tag">Meetings</div>
 
           <h3>Meeting Minutes</h3>
@@ -511,6 +258,7 @@
           </p>
 
           <div class="card-arrow">View minutes →</div>
+
         </a>
 
       </div>
@@ -532,13 +280,19 @@
           involved in transport advocacy.
         </p>
 
-        <div class="hero-actions" style="justify-content:center;">
+        <div
+          class="hero-actions"
+          style="justify-content: center;"
+        >
 
           <a href="/get-involved/" class="button button-primary">
             Get involved
           </a>
 
-          <a href="/get-involved/membership/" class="button button-secondary">
+          <a
+            href="/get-involved/membership/"
+            class="button button-secondary"
+          >
             Membership
           </a>
 
@@ -551,25 +305,12 @@
   </main>
 
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
+  <!-- Shared Footer -->
+  <div id="site-footer"></div>
 
-      <div>
-        <strong>North Sydney Transport Association</strong>
-        <p>NSW's First Youth-Led Transport Advocacy Organisation.</p>
-      </div>
 
-      <div class="footer-links">
-        <a href="/about/">About</a>
-        <a href="/projects/">Projects</a>
-        <a href="/newsroom/">Newsroom</a>
-        <a href="/governance/">Governance</a>
-        <a href="/get-involved/">Get Involved</a>
-      </div>
-
-    </div>
-  </footer>
+  <!-- Shared Components -->
+  <script src="/js/components.js"></script>
 
 </body>
 </html>
