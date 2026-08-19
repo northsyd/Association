@@ -1,99 +1,470 @@
-<!doctype html>
-<html lang="en-AU">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>North Sydney Transport Association | NSTA</title>
+  <title>North Sydney Transport Association</title>
+  <meta name="description" content="The North Sydney Transport Association is NSW's first youth-led transport advocacy organisation.">
 
-  <meta
-    name="description"
-    content="North Sydney Transport Association — NSW's first youth-led transport advocacy organisation."
-  >
+  <link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ================================
+       NSTA HOMEPAGE
+       ================================ */
+
+    .hero {
+      min-height: 72vh;
+      display: flex;
+      align-items: center;
+      padding: 5rem 7%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero-eyebrow {
+      font-family: "Retro Mono Wide", monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.85rem;
+      margin-bottom: 1.25rem;
+      opacity: 0.8;
+    }
+
+    .hero h1 {
+      font-family: "Retro Mono Wide", monospace;
+      font-size: clamp(3rem, 7vw, 7rem);
+      line-height: 0.95;
+      margin: 0 0 1.5rem;
+      max-width: 1000px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.9rem 1.4rem;
+      text-decoration: none;
+      font-weight: 700;
+      border: 2px solid currentColor;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.85;
+    }
+
+    .button-primary {
+      background: #87271b;
+      color: #fff;
+      border-color: #87271b;
+    }
+
+    .button-secondary {
+      color: inherit;
+      background: transparent;
+    }
+
+    .section {
+      padding: 5rem 7%;
+    }
+
+    .section-header {
+      max-width: 800px;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-label {
+      font-family: "Retro Mono Wide", monospace;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+      opacity: 0.7;
+    }
+
+    .section h2 {
+      font-family: "Retro Mono Wide", monospace;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1;
+      margin: 0 0 1rem;
+    }
+
+    .section-header p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .project-grid,
+    .news-grid,
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .card {
+      border: 2px solid currentColor;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      min-height: 220px;
+      transition: transform 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card-tag {
+      font-family: "Retro Mono Wide", monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.65;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-family: "Retro Mono Wide", monospace;
+      font-size: 1.35rem;
+      line-height: 1.1;
+      margin: 0 0 0.75rem;
+    }
+
+    .card p {
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .card-arrow {
+      margin-top: auto;
+      padding-top: 1.5rem;
+      font-weight: 700;
+    }
+
+    .work-section {
+      background: #f2ead8;
+    }
+
+    .news-section {
+      background: #1676bc;
+      color: #fff;
+    }
+
+    .news-section .card {
+      border-color: rgba(255,255,255,0.8);
+    }
+
+    .about-section {
+      background: #dca127;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-copy {
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+
+    .about-stat {
+      border-top: 2px solid currentColor;
+      padding-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .about-stat strong {
+      display: block;
+      font-family: "Retro Mono Wide", monospace;
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .governance-section {
+      background: #28b674;
+    }
+
+    .cta-section {
+      background: #87271b;
+      color: #fff;
+      text-align: center;
+    }
+
+    .cta-section .section-header {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-section .button-secondary {
+      color: #fff;
+    }
+
+    @media (max-width: 900px) {
+      .project-grid,
+      .news-grid,
+      .link-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        min-height: auto;
+        padding: 4rem 6%;
+      }
+
+      .section {
+        padding: 4rem 6%;
+      }
+
+      .project-grid,
+      .news-grid,
+      .link-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- HEADER -->
-  <header class="site-header">
+  <header>
+    <nav>
+      <a href="/" class="logo">NSTA</a>
 
-    <a class="brand" href="index.html" aria-label="NSTA home">
-      <span class="brand-mark">NSTA</span>
-      <span class="brand-text">
-        North Sydney<br>
-        Transport Association
-      </span>
-    </a>
-
-    <button
-      class="menu-toggle"
-      aria-label="Open menu"
-      aria-expanded="false"
-      type="button"
-    >
-      Menu
-    </button>
-
-    <nav class="nav" data-nav aria-label="Main navigation">
-      <a class="active" href="index.html">Introduction &amp; About</a>
-      <a href="team.html">Who We Are</a>
-      <a href="news.html">News &amp; Media</a>
-      <a href="contact.html">Discord &amp; Contact</a>
+      <div class="nav-links">
+        <a href="/about/">About</a>
+        <a href="/projects/">Projects</a>
+        <a href="/newsroom/">Newsroom</a>
+        <a href="/governance/">Governance</a>
+        <a href="/get-involved/">Get Involved</a>
+      </div>
     </nav>
-
   </header>
 
 
+  <!-- HERO -->
   <main>
 
-    <!-- HERO -->
-    <section class="hero-video">
-
-      <video
-        autoplay
-        muted
-        loop
-        playsinline
-        aria-hidden="true"
-      >
-        <source src="assets/hero-video.mp4" type="video/mp4">
-      </video>
-
-      <div class="hero-overlay"></div>
-
-      <div class="hero-route-line" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
+    <section class="hero">
       <div class="hero-content">
 
-        <p class="eyebrow">NSTA / NSW</p>
+        <div class="hero-eyebrow">
+          NSW's First Youth-Led Transport Advocacy Organisation
+        </div>
 
         <h1>
           Better transport.<br>
-          Better places.<br>
-          Better connections.
+          Better connected.
         </h1>
 
-        <p class="lede">
-          NSW's first youth-led transport advocacy organisation.
+        <p>
+          The North Sydney Transport Association is a youth-led organisation
+          advocating for better public transport across North Sydney and beyond.
         </p>
 
         <div class="hero-actions">
-
-          <a href="news.html" class="button">
+          <a href="/projects/" class="button button-primary">
             Explore our work
-            <span aria-hidden="true">→</span>
           </a>
 
-          <a href="contact.html" class="button button-secondary">
-            Join the Association
-            <span aria-hidden="true">→</span>
+          <a href="/get-involved/" class="button button-secondary">
+            Get involved
           </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section class="section work-section">
+
+      <div class="section-header">
+        <div class="section-label">Projects</div>
+
+        <h2>We're working on transport.</h2>
+
+        <p>
+          From local bus services to major network proposals, NSTA campaigns
+          for practical improvements to the transport systems young people use
+          every day.
+        </p>
+      </div>
+
+      <div class="project-grid">
+
+        <a href="/projects/" class="card">
+          <div class="card-tag">Active Project</div>
+
+          <h3>Northern Beaches Network Review</h3>
+
+          <p>
+            Our vision for a better-connected Northern Beaches public transport
+            network.
+          </p>
+
+          <div class="card-arrow">View project →</div>
+        </a>
+
+        <a href="/projects/" class="card">
+          <div class="card-tag">Active Project</div>
+
+          <h3>792N School Bus Campaign</h3>
+
+          <p>
+            Advocating for a school bus network that actually meets the needs
+            of students.
+          </p>
+
+          <div class="card-arrow">View project →</div>
+        </a>
+
+        <a href="/projects/" class="card">
+          <div class="card-tag">Advocacy</div>
+
+          <h3>Crows Nest Village Interchange</h3>
+
+          <p>
+            Working to improve the identity, information and usability of local
+            transport interchanges.
+          </p>
+
+          <div class="card-arrow">View project →</div>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- NEWSROOM -->
+    <section class="section news-section">
+
+      <div class="section-header">
+        <div class="section-label">Newsroom</div>
+
+        <h2>What's happening at NSTA.</h2>
+
+        <p>
+          Follow our latest campaigns, announcements and media releases.
+        </p>
+      </div>
+
+      <div class="news-grid">
+
+        <a href="/newsroom/" class="card">
+          <div class="card-tag">Latest Update</div>
+
+          <h3>Latest NSTA news</h3>
+
+          <p>
+            Read the latest updates from the Association.
+          </p>
+
+          <div class="card-arrow">Read more →</div>
+        </a>
+
+        <a href="/newsroom/media-releases/" class="card">
+          <div class="card-tag">Media Releases</div>
+
+          <h3>What we're saying publicly</h3>
+
+          <p>
+            Browse official NSTA media releases and statements.
+          </p>
+
+          <div class="card-arrow">View releases →</div>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="section about-section">
+
+      <div class="about-layout">
+
+        <div>
+          <div class="section-label">About NSTA</div>
+
+          <h2>Young people should have a say in transport.</h2>
+
+          <div class="about-copy">
+            <p>
+              NSTA is a youth-led transport advocacy organisation focused on
+              improving public transport through research, community advocacy,
+              submissions and engagement with decision-makers.
+            </p>
+
+            <p>
+              We believe the people who use transport every day should have a
+              meaningful voice in how it is planned and delivered.
+            </p>
+
+            <a href="/about/" class="button button-secondary">
+              Learn about NSTA
+            </a>
+          </div>
+        </div>
+
+        <div>
+
+          <div class="about-stat">
+            <strong>Youth-led</strong>
+            <span>Advocacy driven by young transport users.</span>
+          </div>
+
+          <div class="about-stat">
+            <strong>Evidence-based</strong>
+            <span>Research, observation and community feedback inform our work.</span>
+          </div>
+
+          <div class="about-stat">
+            <strong>Independent</strong>
+            <span>Focused on better transport outcomes for our communities.</span>
+          </div>
 
         </div>
 
@@ -102,273 +473,76 @@
     </section>
 
 
-    <!-- OUR WORK -->
-    <section class="section work-section">
+    <!-- GOVERNANCE -->
+    <section class="section governance-section">
 
-      <div class="section-heading">
+      <div class="section-header">
+        <div class="section-label">Governance</div>
 
-        <p class="eyebrow">01 / What we do</p>
+        <h2>Open, accountable and organised.</h2>
 
-        <h2>Our work</h2>
-
-        <p class="section-intro">
-          NSTA works to improve transport, streets and connections across
-          North Sydney and NSW while giving young people a stronger voice
-          in transport decision-making.
+        <p>
+          NSTA publishes key organisational information so members and the
+          public can understand how the Association operates.
         </p>
-
       </div>
 
+      <div class="link-grid">
 
-      <div class="card-grid four">
+        <a href="/governance/" class="card">
+          <div class="card-tag">Governance</div>
 
-        <article class="card card-red">
-
-          <span class="card-number">01</span>
-
-          <h3>Submissions</h3>
+          <h3>Our Constitution</h3>
 
           <p>
-            We write formal responses to council and government consultations
-            on transport planning.
+            Read the rules that govern the Association.
           </p>
 
-          <a href="news.html" class="card-link">
-            View our work →
-          </a>
+          <div class="card-arrow">View governance →</div>
+        </a>
 
-        </article>
+        <a href="/governance/minutes/" class="card">
+          <div class="card-tag">Meetings</div>
 
-
-        <article class="card card-gold">
-
-          <span class="card-number">02</span>
-
-          <h3>Projects</h3>
+          <h3>Meeting Minutes</h3>
 
           <p>
-            We develop ideas for corridors, stations, bus priority,
-            rail links and active transport.
+            Browse published records of NSTA meetings.
           </p>
 
-          <a href="news.html" class="card-link">
-            Explore projects →
-          </a>
-
-        </article>
-
-
-        <article class="card card-blue">
-
-          <span class="card-number">03</span>
-
-          <h3>Events</h3>
-
-          <p>
-            We run debates, excursions, discussions and transport-themed
-            activities.
-          </p>
-
-          <a href="contact.html" class="card-link">
-            Get involved →
-          </a>
-
-        </article>
-
-
-        <article class="card card-green">
-
-          <span class="card-number">04</span>
-
-          <h3>Media</h3>
-
-          <p>
-            We publish updates, statements and explainers on local
-            transport issues.
-          </p>
-
-          <a href="news.html" class="card-link">
-            Read the latest →
-          </a>
-
-        </article>
+          <div class="card-arrow">View minutes →</div>
+        </a>
 
       </div>
 
     </section>
 
 
-    <!-- QUOTES -->
-    <section class="section quote-section">
+    <!-- GET INVOLVED -->
+    <section class="section cta-section">
 
-      <div class="quote quote-red">
+      <div class="section-header">
 
-        <span class="quote-mark" aria-hidden="true">“</span>
+        <div class="section-label">Get Involved</div>
 
-        <p>
-          We commend the group for its strong interest in public transport
-          and for the clear, well-reasoned and well-researched arguments
-          you have outlined.
-        </p>
-
-        <span class="quote-source">
-          Geographical Names Board of NSW
-        </span>
-
-      </div>
-
-
-      <div class="quote quote-blue">
-
-        <span class="quote-mark" aria-hidden="true">“</span>
+        <h2>Want to help shape better transport?</h2>
 
         <p>
-          Young people are not just the passengers of tomorrow. We are
-          transport users today, and our experiences should help shape
-          the decisions that affect our communities.
+          Join NSTA, volunteer with our work or find out how you can get
+          involved in transport advocacy.
         </p>
 
-        <span class="quote-source">
-          NSTA statement
-        </span>
+        <div class="hero-actions" style="justify-content:center;">
 
-      </div>
+          <a href="/get-involved/" class="button button-primary">
+            Get involved
+          </a>
 
-    </section>
+          <a href="/get-involved/membership/" class="button button-secondary">
+            Membership
+          </a>
 
-
-    <!-- FAQ -->
-    <section class="section faq-section">
-
-      <div class="section-heading">
-
-        <p class="eyebrow">02 / FAQ</p>
-
-        <h2>Common questions</h2>
-
-        <p class="section-intro">
-          New to NSTA? Here's what you need to know.
-        </p>
-
-      </div>
-
-
-      <div class="faq-list">
-
-        <details>
-          <summary>
-            <span>What does NSTA actually do?</span>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-
-          <p>
-            NSTA advocates for better public transport, streets and
-            connections. We participate in consultations, develop
-            proposals, engage with decision-makers, publish research
-            and commentary, and run community and youth-focused activities.
-          </p>
-        </details>
-
-
-        <details>
-          <summary>
-            <span>Who can get involved?</span>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-
-          <p>
-            NSTA is youth-led, with opportunities for young people to
-            contribute to advocacy, research, media, events, graphics,
-            photography and other projects.
-          </p>
-        </details>
-
-
-        <details>
-          <summary>
-            <span>Do I need to be a transport expert?</span>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-
-          <p>
-            Not at all. An interest in transport and a willingness to
-            contribute are more important than technical knowledge.
-            There are plenty of ways to get involved without being a
-            transport planner or engineer.
-          </p>
-        </details>
-
-
-        <details>
-          <summary>
-            <span>Is NSTA part of the government?</span>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-
-          <p>
-            No. NSTA is an independent advocacy organisation. We are not
-            part of Transport for NSW, North Sydney Council or any school
-            unless a specific partnership or affiliation is clearly stated.
-          </p>
-        </details>
-
-
-        <details>
-          <summary>
-            <span>Where does NSTA operate?</span>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-
-          <p>
-            Our work is centred on North Sydney and the wider Sydney
-            transport network, while our advocacy can extend to transport
-            issues across NSW.
-          </p>
-        </details>
-
-
-        <details>
-          <summary>
-            <span>How can I support an NSTA campaign?</span>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-
-          <p>
-            Follow our updates, share our campaigns, contribute your
-            perspective, attend relevant consultations or events, and
-            encourage decision-makers to consider the issues we're raising.
-          </p>
-        </details>
-
-
-        <details>
-          <summary>
-            <span>Can organisations work with NSTA?</span>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-
-          <p>
-            Yes. We welcome appropriate opportunities to collaborate with
-            community organisations, youth groups and other organisations
-            on transport-related initiatives.
-          </p>
-        </details>
-
-
-        <details>
-          <summary>
-            <span>How can I contact NSTA?</span>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-
-          <p>
-            You can contact us at
-            <a href="mailto:nsta@northsydneytransport.org">
-              nsta@northsydneytransport.org
-            </a>
-            or connect with us through Instagram or Discord.
-          </p>
-        </details>
+        </div>
 
       </div>
 
@@ -377,101 +551,25 @@
   </main>
 
 
-  <!-- MASTER FOOTER
-       Keep this footer identical across every page. -->
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
 
-  <footer class="footer">
-
-    <div class="footer-grid">
-
-      <div class="footer-main">
-
-        <a class="footer-brand" href="index.html">
-          North Sydney Transport Association
-        </a>
-
-        <p>
-          Trailblazing youth transport advocacy for a better connected city.
-        </p>
-
-        <p class="small">
-          Independent advocacy group. Not affiliated with Transport for NSW,
-          North Sydney Council, or any school unless clearly stated.
-        </p>
-
+      <div>
+        <strong>North Sydney Transport Association</strong>
+        <p>NSW's First Youth-Led Transport Advocacy Organisation.</p>
       </div>
 
-
-      <div class="footer-column">
-
-        <h3>Pages</h3>
-
-        <a href="index.html">Introduction &amp; About</a>
-        <a href="team.html">Who We Are</a>
-        <a href="news.html">News &amp; Media</a>
-        <a href="contact.html">Discord &amp; Contact</a>
-
-      </div>
-
-
-      <div class="footer-column">
-
-        <h3>Contact</h3>
-
-        <a href="mailto:nsta@northsydneytransport.org">
-          Email us
-        </a>
-
-        <a
-          href="https://www.instagram.com/northsydneytransport_org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
-
-        <a
-          href="https://discord.gg/wrxN6MrN6j"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Discord
-        </a>
-
-      </div>
-
-
-      <div class="footer-column">
-
-        <h3>Acknowledgement</h3>
-
-        <p>
-          NSTA acknowledges the Cammeraygal people as the Traditional
-          Custodians of the North Sydney area.
-        </p>
-
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/projects/">Projects</a>
+        <a href="/newsroom/">Newsroom</a>
+        <a href="/governance/">Governance</a>
+        <a href="/get-involved/">Get Involved</a>
       </div>
 
     </div>
-
-
-    <div class="footer-bottom">
-
-      <p>
-        © <span id="year"></span>
-        North Sydney Transport Association
-      </p>
-
-      <p class="footer-location">
-        NSW / AUSTRALIA
-      </p>
-
-    </div>
-
   </footer>
-
-
-  <script src="script.js"></script>
 
 </body>
 </html>
