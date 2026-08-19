@@ -1,6 +1,8 @@
+```css
 /* =========================================================
    NSTA — SITE-WIDE STYLES
    ========================================================= */
+
 
 /* ---------------------------------------------------------
    FONTS
@@ -8,7 +10,7 @@
 
 @font-face {
   font-family: "Retro Mono Wide";
-  src: url("/assets/fonts/Retro Mono Wide.woff2") format("woff2");
+  src: url("/Association/assets/fonts/Retro%20Mono%20Wide.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -22,6 +24,7 @@
 :root {
   --cream: #f2ead8;
   --cream-light: #faf6ec;
+
   --red: #87271b;
   --gold: #dca127;
   --blue: #1676bc;
@@ -29,7 +32,6 @@
 
   --black: #171717;
   --white: #ffffff;
-  --border: 2px solid currentColor;
 
   --max-width: 1400px;
 }
@@ -87,13 +89,14 @@ p {
 
 
 /* ---------------------------------------------------------
-   SITE HEADER
+   HEADER
    --------------------------------------------------------- */
 
 .site-header {
   width: 100%;
   position: relative;
   z-index: 1000;
+
   background: var(--cream-light);
   border-bottom: 2px solid var(--black);
 }
@@ -101,8 +104,9 @@ p {
 .site-nav {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1rem 5%;
+
   min-height: 76px;
+  padding: 1rem 5%;
 
   display: flex;
   align-items: center;
@@ -113,7 +117,6 @@ p {
 .site-logo {
   font-family: "Retro Mono Wide", "Courier New", monospace;
   font-size: 1.8rem;
-  font-weight: normal;
   text-decoration: none;
   line-height: 1;
 }
@@ -132,12 +135,16 @@ p {
 
 .nav-links a::after {
   content: "";
+
   position: absolute;
   left: 0;
   bottom: -5px;
+
   width: 0;
   height: 2px;
+
   background: currentColor;
+
   transition: width 0.2s ease;
 }
 
@@ -147,21 +154,29 @@ p {
 }
 
 
-/* Mobile navigation button */
+/* ---------------------------------------------------------
+   MOBILE NAVIGATION
+   --------------------------------------------------------- */
 
 .nav-toggle {
   display: none;
+
   border: 0;
   background: transparent;
+
   padding: 0.5rem;
+
   cursor: pointer;
 }
 
 .nav-toggle span {
   display: block;
+
   width: 25px;
   height: 2px;
+
   background: currentColor;
+
   margin: 5px 0;
 }
 
@@ -178,28 +193,28 @@ main {
   padding: 6rem 7%;
 }
 
-.section > * {
-  max-width: var(--max-width);
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .section-header {
-  margin-bottom: 3rem;
+  max-width: var(--max-width);
+  margin: 0 auto 3rem;
 }
 
 .section-label {
   font-family: "Retro Mono Wide", "Courier New", monospace;
+
   text-transform: uppercase;
   letter-spacing: 0.08em;
+
   font-size: 0.78rem;
+
   margin-bottom: 0.8rem;
+
   opacity: 0.7;
 }
 
 .section h2 {
   font-size: clamp(2rem, 4vw, 3.6rem);
   line-height: 1;
+
   margin-bottom: 1rem;
 }
 
@@ -215,46 +230,62 @@ main {
 
 .hero {
   min-height: 72vh;
+
   display: flex;
   align-items: center;
+
   padding: 6rem 7%;
+
+  background: var(--cream);
+
   position: relative;
   overflow: hidden;
-  background: var(--cream);
 }
 
 .hero-content {
   max-width: var(--max-width);
   width: 100%;
+
   margin: 0 auto;
 }
 
 .hero-eyebrow {
   font-family: "Retro Mono Wide", "Courier New", monospace;
+
   text-transform: uppercase;
   letter-spacing: 0.08em;
+
   font-size: 0.8rem;
+
   margin-bottom: 1.25rem;
+
   opacity: 0.8;
 }
 
 .hero h1 {
   font-size: clamp(3rem, 7vw, 7rem);
+
   line-height: 0.95;
+
   margin-bottom: 1.5rem;
+
   max-width: 1050px;
 }
 
 .hero p {
   max-width: 680px;
+
   font-size: 1.2rem;
+
   line-height: 1.6;
+
   margin-bottom: 2rem;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+
   gap: 1rem;
 }
 
@@ -265,6 +296,7 @@ main {
 
 .button {
   display: inline-block;
+
   padding: 0.9rem 1.4rem;
 
   text-decoration: none;
@@ -274,8 +306,7 @@ main {
 
   transition:
     transform 0.15s ease,
-    opacity 0.15s ease,
-    background 0.15s ease;
+    opacity 0.15s ease;
 }
 
 .button:hover {
@@ -285,7 +316,9 @@ main {
 
 .button-primary {
   background: var(--red);
+
   color: var(--white);
+
   border-color: var(--red);
 }
 
@@ -301,19 +334,27 @@ main {
 .project-grid,
 .news-grid,
 .link-grid {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
   gap: 1.25rem;
 }
 
 .card {
-  border: var(--border);
+  border: 2px solid currentColor;
+
   padding: 1.5rem;
+
+  min-height: 220px;
 
   display: flex;
   flex-direction: column;
-
-  min-height: 220px;
 
   color: inherit;
   text-decoration: none;
@@ -329,16 +370,22 @@ main {
 
 .card-tag {
   font-family: "Retro Mono Wide", "Courier New", monospace;
+
   font-size: 0.7rem;
+
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  opacity: 0.65;
+
   margin-bottom: 1rem;
+
+  opacity: 0.65;
 }
 
 .card h3 {
   font-size: 1.35rem;
+
   line-height: 1.1;
+
   margin-bottom: 0.75rem;
 }
 
@@ -348,7 +395,9 @@ main {
 
 .card-arrow {
   margin-top: auto;
+
   padding-top: 1.5rem;
+
   font-weight: 700;
 }
 
@@ -363,6 +412,7 @@ main {
 
 .news-section {
   background: var(--blue);
+
   color: var(--white);
 }
 
@@ -380,7 +430,9 @@ main {
 
 .cta-section {
   background: var(--red);
+
   color: var(--white);
+
   text-align: center;
 }
 
@@ -389,19 +441,30 @@ main {
   margin-right: auto;
 }
 
+.cta-section .hero-actions {
+  justify-content: center;
+}
+
 .cta-section .button-secondary {
   color: var(--white);
 }
 
 
 /* ---------------------------------------------------------
-   ABOUT SECTION
+   ABOUT
    --------------------------------------------------------- */
 
 .about-layout {
+  max-width: var(--max-width);
+  margin: 0 auto;
+
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+
+  grid-template-columns:
+    1.2fr 0.8fr;
+
   gap: 4rem;
+
   align-items: start;
 }
 
@@ -412,15 +475,21 @@ main {
 
 .about-stat {
   border-top: 2px solid currentColor;
+
   padding-top: 1rem;
+
   margin-bottom: 2rem;
 }
 
 .about-stat strong {
   display: block;
+
   font-family: "Retro Mono Wide", "Courier New", monospace;
+
   font-size: 2rem;
+
   line-height: 1;
+
   margin-bottom: 0.4rem;
 }
 
@@ -431,23 +500,29 @@ main {
 
 .page-hero {
   padding: 5rem 7%;
+
   background: var(--cream);
+
   border-bottom: 2px solid var(--black);
 }
 
 .page-hero-inner {
   max-width: var(--max-width);
+
   margin: 0 auto;
 }
 
 .page-hero h1 {
   font-size: clamp(2.8rem, 6vw, 6rem);
+
   line-height: 0.95;
+
   margin-bottom: 1rem;
 }
 
 .page-hero p {
   max-width: 750px;
+
   font-size: 1.15rem;
 }
 
@@ -458,22 +533,26 @@ main {
 
 .content {
   max-width: 900px;
+
   margin: 0 auto;
 }
 
 .content h2 {
   font-size: 2rem;
+
   margin-top: 3rem;
 }
 
 .content h3 {
   font-size: 1.4rem;
+
   margin-top: 2rem;
 }
 
 .content p,
 .content li {
   font-size: 1.05rem;
+
   line-height: 1.7;
 }
 
@@ -484,23 +563,30 @@ main {
 
 
 /* ---------------------------------------------------------
-   PROJECT PAGES
+   PROJECTS
    --------------------------------------------------------- */
 
 .project-meta {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 0.75rem;
+
   margin: 1.5rem 0 2rem;
 }
 
 .project-status {
   display: inline-block;
+
   padding: 0.45rem 0.75rem;
+
   border: 2px solid currentColor;
 
   font-family: "Retro Mono Wide", "Courier New", monospace;
+
   font-size: 0.7rem;
+
   text-transform: uppercase;
 }
 
@@ -510,6 +596,7 @@ main {
 
 .project-section-inner {
   max-width: 900px;
+
   margin: 0 auto;
 }
 
@@ -519,46 +606,67 @@ main {
    --------------------------------------------------------- */
 
 .news-list {
+  max-width: 900px;
+
+  margin: 0 auto;
+
   display: grid;
+
   gap: 1rem;
 }
 
 .news-item {
   border-top: 2px solid currentColor;
+
   padding: 1.5rem 0;
 
   text-decoration: none;
+
   display: grid;
+
   grid-template-columns: 180px 1fr;
+
   gap: 2rem;
 }
 
 .news-date {
   font-family: "Retro Mono Wide", "Courier New", monospace;
+
   font-size: 0.8rem;
+
   text-transform: uppercase;
+
   opacity: 0.7;
 }
 
 .news-item h2 {
   font-size: 1.6rem;
+
   margin-bottom: 0.5rem;
 }
 
 
 /* ---------------------------------------------------------
-   DOCUMENTS / MINUTES
+   DOCUMENTS
    --------------------------------------------------------- */
 
 .document-list {
+  max-width: 900px;
+
+  margin: 0 auto;
+
   display: grid;
+
   gap: 1rem;
 }
 
 .document-card {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   gap: 2rem;
 
   padding: 1.25rem 1.5rem;
@@ -566,6 +674,8 @@ main {
   border: 2px solid currentColor;
 
   text-decoration: none;
+
+  transition: transform 0.15s ease;
 }
 
 .document-card:hover {
@@ -574,8 +684,11 @@ main {
 
 .document-type {
   font-family: "Retro Mono Wide", "Courier New", monospace;
+
   font-size: 0.7rem;
+
   text-transform: uppercase;
+
   opacity: 0.65;
 }
 
@@ -585,25 +698,37 @@ main {
    --------------------------------------------------------- */
 
 .team-grid {
+  max-width: var(--max-width);
+
+  margin: 0 auto;
+
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
   gap: 1.25rem;
 }
 
 .team-card {
   border: 2px solid currentColor;
+
   padding: 1.5rem;
 }
 
 .team-card h2 {
   font-size: 1.4rem;
+
   margin-bottom: 0.3rem;
 }
 
 .team-role {
   font-family: "Retro Mono Wide", "Courier New", monospace;
+
   font-size: 0.7rem;
+
   text-transform: uppercase;
+
   opacity: 0.7;
 }
 
@@ -614,50 +739,67 @@ main {
 
 .site-footer {
   background: var(--black);
+
   color: var(--white);
+
   padding: 4rem 7% 1.5rem;
 }
 
 .footer-inner {
   max-width: var(--max-width);
+
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 1fr 2fr;
+
+  grid-template-columns:
+    1fr 2fr;
+
   gap: 4rem;
 }
 
 .footer-logo {
   font-family: "Retro Mono Wide", "Courier New", monospace;
+
   font-size: 2rem;
+
   text-decoration: none;
 }
 
 .footer-brand p {
   max-width: 300px;
+
   opacity: 0.7;
 }
 
 .footer-navigation {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
   gap: 1.5rem;
 }
 
 .footer-column {
   display: flex;
+
   flex-direction: column;
+
   gap: 0.5rem;
 }
 
 .footer-column h3 {
   font-size: 0.85rem;
+
   margin-bottom: 0.5rem;
+
   opacity: 0.65;
 }
 
 .footer-column a {
   text-decoration: none;
+
   font-size: 0.9rem;
 }
 
@@ -667,12 +809,15 @@ main {
 
 .footer-bottom {
   max-width: var(--max-width);
+
   margin: 3rem auto 0;
+
   padding-top: 1rem;
 
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 
   font-size: 0.8rem;
+
   opacity: 0.65;
 }
 
@@ -699,6 +844,7 @@ main {
 
   .about-layout {
     grid-template-columns: 1fr;
+
     gap: 2rem;
   }
 
@@ -720,16 +866,21 @@ main {
 
   .nav-links {
     position: absolute;
+
     top: 100%;
     left: 0;
     right: 0;
 
     display: none;
+
     flex-direction: column;
+
     align-items: stretch;
+
     gap: 0;
 
     background: var(--cream-light);
+
     border-bottom: 2px solid var(--black);
   }
 
@@ -739,6 +890,7 @@ main {
 
   .nav-links a {
     padding: 1rem 7%;
+
     border-top: 1px solid rgba(0, 0, 0, 0.15);
   }
 
@@ -748,6 +900,7 @@ main {
 
   .hero {
     min-height: auto;
+
     padding: 4.5rem 6%;
   }
 
@@ -776,12 +929,15 @@ main {
 
   .news-item {
     grid-template-columns: 1fr;
+
     gap: 0.5rem;
   }
 
   .document-card {
     align-items: flex-start;
+
     flex-direction: column;
+
     gap: 0.75rem;
   }
 
@@ -799,6 +955,7 @@ main {
 
   .hero-actions {
     flex-direction: column;
+
     align-items: stretch;
   }
 
@@ -806,3 +963,4 @@ main {
     text-align: center;
   }
 }
+```
