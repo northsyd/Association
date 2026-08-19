@@ -154,6 +154,152 @@ p {
 }
 
 
+/* ================================
+   NAVIGATION DROPDOWNS
+   ================================ */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  border: none;
+  background: none;
+
+  font: inherit;
+  color: inherit;
+
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-arrow {
+  font-size: 0.8em;
+  transition: transform 0.2s ease;
+}
+
+
+/* Desktop dropdown */
+
+.nav-dropdown-menu {
+  position: absolute;
+
+  top: calc(100% + 0.75rem);
+  left: 50%;
+
+  transform: translateX(-50%) translateY(-8px);
+
+  min-width: 220px;
+
+  padding: 0.5rem;
+
+  background: var(--cream, #f5f0e6);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+
+  z-index: 1000;
+}
+
+
+/* Show dropdown */
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu,
+.nav-dropdown.dropdown-open .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateX(-50%) translateY(0);
+}
+
+
+.nav-dropdown.dropdown-open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+
+.nav-dropdown-menu a {
+  display: block;
+
+  padding: 0.7rem 0.85rem;
+
+  text-decoration: none;
+  color: inherit;
+
+  white-space: nowrap;
+}
+
+
+.nav-dropdown-menu a:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+
+/* ================================
+   MOBILE DROPDOWNS
+   ================================ */
+
+@media (max-width: 768px) {
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown-toggle {
+    width: 100%;
+
+    justify-content: space-between;
+
+    padding: 0.75rem 0;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+
+    transform: none;
+
+    min-width: 0;
+
+    width: 100%;
+
+    padding: 0;
+
+    border: none;
+    box-shadow: none;
+
+    background: transparent;
+
+    opacity: 1;
+    visibility: visible;
+
+    display: none;
+  }
+
+  .nav-dropdown.dropdown-open .nav-dropdown-menu {
+    display: block;
+
+    transform: none;
+  }
+
+  .nav-dropdown-menu a {
+    padding: 0.6rem 1rem;
+  }
+
+}
+
 /* ---------------------------------------------------------
    MOBILE NAVIGATION
    --------------------------------------------------------- */
